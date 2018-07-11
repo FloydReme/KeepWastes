@@ -23,4 +23,7 @@ Name  | Reason
 # News
 `11.07.18` Created README for the app
 # To-Do
-* Screenshots
+- [ ] Screenshots
+- [ ] Registration system
+- [ ] New Design(50/50)
+- [ ] Create App
