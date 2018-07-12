@@ -21,7 +21,9 @@ Name  | Reason
 [MySQL DataBase](https://dev.mysql.com/downloads/workbench/) | Saving your wastes
 
 # News
-`11.07.18` Created README for the app
+Date| Event
+----|-----
+`11.07.18`| Created README for the app
 # To-Do
 - [ ] Screenshots
 - [ ] Registration system
