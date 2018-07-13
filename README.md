@@ -1,7 +1,7 @@
 `❗WARNING! Program is not ready yet❗`
 
 
-![alt text](https://pp.userapi.com/c849320/v849320396/25248/NvEeQHqjx8g.jpg)
+![alt text](https://pp.userapi.com/c849520/v849520598/29876/y4g9qSc7a7I.jpg)
 # KeepWastes 
 The best open-source application for keeping your money wastes on C#
 
@@ -24,8 +24,10 @@ Name  | Reason
 Date| Event
 ----|-----
 `11.07.18`| Created README for the app
+`13.07.18` | Redesigned the app
 # To-Do
-- [ ] Screenshots
+- [x] New Design
 - [ ] Registration system
-- [ ] New Design(50/50)
+- [ ] Reset Password - form
 - [ ] Create App
+- [ ] Screenshots
