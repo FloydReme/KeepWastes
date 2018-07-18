@@ -1,7 +1,7 @@
 `❗WARNING! Program is not ready yet❗`
 
 
-![alt text](https://pp.userapi.com/c849520/v849520598/29876/y4g9qSc7a7I.jpg)
+![alt text](https://pp.userapi.com/c845417/v845417203/a417a/8Ro1XqxS4Do.jpg)
 # KeepWastes 
 The best open-source application for keeping your money wastes on C#
 
