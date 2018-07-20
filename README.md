@@ -25,8 +25,10 @@ Date| Event
 ----|-----
 `11.07.18`| Created README for the app
 `13.07.18` | Redesigned the app
+`19.07.18` | Created Telegram Bot for Inserting your wastes
 # To-Do
 - [x] New Design
+- [ ] Telegram Bot
 - [ ] Registration system
 - [ ] Reset Password - form
 - [ ] Create App
