@@ -10,7 +10,7 @@ namespace KeepWastes.ViewModel
 {
     public class MainViewModel : ViewModelBase
     {
-        private Page Goals;
+        private Page Settings;
         private Page Stats;
         private Page Main;
 
@@ -46,7 +46,7 @@ namespace KeepWastes.ViewModel
 
         public MainViewModel()
         {
-            Goals = new Goals();
+            Settings = new Settings();
             Stats = new Stats();
             Main = new Main();
 
@@ -66,7 +66,7 @@ namespace KeepWastes.ViewModel
         {
             get
             {
-                return new RelayCommand(() => CurrentPage = Goals);
+                return new RelayCommand(() => CurrentPage = Settings);
             }
         }
 
@@ -78,4 +78,5 @@ namespace KeepWastes.ViewModel
             }
         }
     }
-}
+  }
+ 

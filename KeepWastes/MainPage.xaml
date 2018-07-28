@@ -3,7 +3,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
-        xmlns:viewModel="clr-namespace:KeepWastes.ViewModel"
+        xmlns:ViewModel="clr-namespace:KeepWastes.ViewModel"
         x:Class="KeepWastes.MainPage"
         mc:Ignorable="d"
         Title="KeepWastes" 
@@ -11,9 +11,6 @@
         Width="1242"
         MinHeight="800"
         MinWidth="1500">
-
-
-
 
     <Window.Resources>
         <Style x:Key="ButtonStyle1" TargetType="{x:Type Button}">
@@ -129,8 +126,8 @@
                         <Storyboard>
                             <ColorAnimation Storyboard.TargetProperty="(Control.Background).(SolidColorBrush.Color)"
                                             FillBehavior="HoldEnd"
-                                            Duration="0:0:0.4"
-                                            To="#3E00B2"/>
+                                            Duration="0:0:0.2"
+                                            To="#0A4D93"/>
                         </Storyboard>
                     </BeginStoryboard>
                 </EventTrigger>
@@ -139,18 +136,8 @@
                         <Storyboard>
                             <ColorAnimation Storyboard.TargetProperty="(Control.Background).(SolidColorBrush.Color)"
                                             FillBehavior="HoldEnd"
-                                            Duration="0:0:0.4"
-                                            To="#FF7B35FF"/>
-                        </Storyboard>
-                    </BeginStoryboard>
-                </EventTrigger>
-                <EventTrigger RoutedEvent="ButtonBase.Click">
-                    <BeginStoryboard>
-                        <Storyboard>
-                            <ColorAnimation Storyboard.TargetProperty="(Control.Background).(SolidColorBrush.Color)"
-                                            FillBehavior="HoldEnd"
-                                            Duration="0:0:0.4"
-                                            To="#9762FB"/>
+                                            Duration="0:0:0.2"
+                                            To="#FF1E84EF"/>
                         </Storyboard>
                     </BeginStoryboard>
                 </EventTrigger>
@@ -341,7 +328,7 @@
                             <Ellipse Fill="White"/>
                             <materialDesign:PackIcon Kind="Plus" 
                                                      RenderTransformOrigin="0.5,0.5"
-                                                     Foreground="#FF7B35FF"
+                                                     Foreground="#FF1E84EF"
                                                      Height="30"
                                                      Width="30"
                                                      HorizontalAlignment="Right"
@@ -365,7 +352,7 @@
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="{x:Type Button}">
-                        <Grid>
+                        <Grid Background="#FF1E84EF">
                             <Path Data="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z" 
                                   Fill="White" Height="26.333" Stretch="Fill" Width="24.667" />
                         </Grid>
@@ -423,19 +410,16 @@
 
 
 
-    <Window.DataContext>
-        <viewModel:MainViewModel/>
-    </Window.DataContext>
 
 
 
 
 
 
-    <Grid Background="#FF7B35FF" x:Name="GridMain">
+    <Grid Background="#FFF8FAFD" x:Name="GridMain">
         <Grid.RowDefinitions>
-            <RowDefinition Height="78*"/>
-            <RowDefinition Height="175*"/>
+            <RowDefinition Height="60*"/>
+            <RowDefinition Height="193*"/>
             <RowDefinition Height="516*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
@@ -446,13 +430,13 @@
 
         <Grid Grid.Row="0" Grid.ColumnSpan="3">
             <StackPanel Orientation="Horizontal" 
-                        Background="#FF7B35FF" 
-                        Margin="200,0,0,0">
+                        Background="#FFF8FAFD" 
+                        Margin="4,84,260,-84" d:IsHidden="True">
                 <Button x:Name="Main"
                     Height="50" 
                     BorderBrush="{x:Null}"
                     Width="280" 
-                    Background="#FF7B35FF"
+                    Background="#FF1E84EF"
                     Style="{StaticResource ButtonStyle3}"
                     Margin="120,0,0,0"
                     Content="MAIN PAGE"
@@ -464,7 +448,7 @@
                     Height="50" 
                     BorderBrush="{x:Null}"
                     Width="280" 
-                    Background="#FF7B35FF"
+                    Background="#FF1E84EF"
                     Style="{StaticResource ButtonStyle3}"
                     Margin="20,0,0,0"
                     HorizontalAlignment="Left"
@@ -473,64 +457,38 @@
                     FontSize="30" 
                     Command="{Binding StatsClick}"
                     Click="Stats_Click" FontFamily="/KeepWastes;component/Fonts/#DIN" FontWeight="Bold"/>
-                <Button x:Name="Goals" 
+                <Button x:Name="Settings" 
                     Height="54" 
                     Style="{StaticResource ButtonStyle3}"
                     HorizontalAlignment="Right"
                     Foreground="White"
                     FontSize="30"
-                    Background="#FF7B35FF"
+                    Background="#FF1E84EF"
                     FontFamily="/KeepWastes;component/Fonts/#DIN"
                     BorderBrush="{x:Null}"
                     Width="280" 
                     Margin="20,0,0,0"
-                    Content="GOALS" 
+                    Content="SETTINGS" 
                     Command="{Binding GoalsClick}"
                     Click="Goals_Click" FontWeight="Bold"/>
             </StackPanel>
         </Grid>
-
-        <Rectangle x:Name="RectangleSearch" 
-                   Grid.Column="1"
-                   MaxHeight="48"
-                   Grid.Row="1" 
-                   Fill="#FFEEEEEE" 
-                   VerticalAlignment="Top"
-                   Height="48" 
-                   StrokeThickness="0"
-                   HorizontalAlignment="Left" 
-                   Grid.ColumnSpan="2" Margin="0" Width="{Binding ActualWidth, ElementName=listViewItem, Mode=OneWay}"/>
-
-        <TextBox Grid.Column="1" 
-                 Margin="1,0,0,0" 
-                 Grid.Row="1" 
-                 Grid.ColumnSpan="2" 
-                 Background="{x:Null}" 
-                 BorderBrush="{x:Null}" 
-                 Foreground="#FF7B35FF"
-                 BorderThickness="0"
-                 FontFamily="/KeepWastes;component/Fonts/#Arial Rounded MT Bold" 
-                 FontSize="34"
-                 MaxHeight="39"
-                 Padding="6 0 0 0"
-                 HorizontalAlignment="Left" 
-                 VerticalAlignment="Top" Width="{Binding ActualWidth, ElementName=listView, Mode=OneWay}" Height="46"/>
 
 
 
 
         <Label Content="TAGS" 
                    HorizontalAlignment="Left"
-                   VerticalAlignment="Center" Margin="14,17,0,113" 
+                   VerticalAlignment="Center" Margin="14,22,0,127" 
                    Background="{x:Null}" 
                    Foreground="#FFECECEC" 
                    FontFamily="/KeepWastes;component/Fonts/#Arial Rounded MT Bold" 
-                   FontWeight="Bold" FontSize="30" Grid.Row="1" Height="45" Width="94"/>
+                   FontWeight="Bold" FontSize="30" Grid.Row="1" Height="44" Width="94" d:IsHidden="True"/>
 
         <Border Margin="0,74,0,267" 
                 Grid.RowSpan="2" 
                 Grid.Row="1"
-                x:Name="Border2">
+                x:Name="Border2" d:IsHidden="True">
             <Popup x:Name="PopupTag"
                    AllowsTransparency="True"
                    ClipToBounds="True"
@@ -541,7 +499,7 @@
                             Width="{Binding ActualWidth, ElementName=Border2, Mode=OneWay}">
                     <Rectangle RadiusX="1"
                                RadiusY="1" 
-                               Fill="#FF7B35FF"
+                               Fill="#FF1E84EF"
                                Height="4" 
                                Margin="0,35,0,0"/>
                     <Button Height="32" 
@@ -553,7 +511,7 @@
                             Click="Button_Click"/>
                     <Label Content="New Tag"
                            FontSize="20" 
-                           Foreground="#FF7B35FF" 
+                           Foreground="#FF1E84EF" 
                            FontFamily="/KeepWastes;component/Fonts/#Arial Rounded MT Bold" 
                            Margin="6,-38,133,0"/>
                     <TextBox Height="23" 
@@ -567,7 +525,7 @@
                              FontSize="16" FontWeight="Bold"/>
                     <Rectangle RadiusX="1"
                         RadiusY="1" 
-                        Fill="#FF7B35FF"
+                        Fill="#FF1E84EF"
                         Height="4" 
                         Margin="10,0"/>
                     <Button Height="37"
@@ -593,13 +551,13 @@
                 Grid.Row="1" 
                 HorizontalAlignment="Right"
                 Style="{StaticResource AddStyle}"
-                Foreground="#FF7B35FF" 
-                Click="AddTag_Click" Width="24"/>
+                Foreground="#FF1E84EF" 
+                Click="AddTag_Click" Width="24" d:IsHidden="True"/>
 
 
         <Button x:Name="AddNewWaste"
                 BorderBrush="{x:Null}"
-                Background="#FF16CD1C"
+                Background="#FF0055FD"
                 Content="+"
                 MaxWidth="400"
                 HorizontalAlignment="Right"
@@ -614,7 +572,7 @@
 
 
         <Button x:Name="Logout" 
-                Background="#FF7B35FF"
+                Background="#FFF8FAFD"
                 BorderBrush="{x:Null}" 
                 Foreground="{x:Null}"
                 Style="{StaticResource ButtonStyle2}"
@@ -622,7 +580,7 @@
                 Click="Logout_Click" 
                 Width="200">
             <materialDesign:PackIcon Kind="AccountSwitch" 
-                                     Foreground="White" 
+                                     Foreground="#FF0055FD" 
                                      Height="60"
                                      HorizontalAlignment="Center"
                                      VerticalAlignment="Center"
@@ -640,7 +598,7 @@
                     Width="680"
                     HorizontalAlignment="Center"
                     VerticalAlignment="Center" 
-                Margin="209,46,348,45" 
+                Margin="209,50,348,59" 
                 Grid.Column="1" 
                 Grid.ColumnSpan="2">
             <Popup x:Name="Popup"
@@ -649,7 +607,7 @@
                    Placement="Center" 
                    PopupAnimation="Fade" Margin="0,0,0,-18">
                 <StackPanel Orientation="Vertical"  
-                            Background="#FF7B35FF"
+                            Background="#FF1E84EF"
                             Width="600" 
                             Height="618">
 
@@ -682,14 +640,6 @@
                                       Height="42"
                                       Style="{StaticResource ComboBoxItemStyle}">
                             <StackPanel Orientation="Horizontal" Width="118" Margin="0,3,0,-1" RenderTransformOrigin="0.5,0.5">
-                                <StackPanel.RenderTransform>
-                                    <TransformGroup>
-                                        <ScaleTransform/>
-                                        <SkewTransform AngleY="-0.336"/>
-                                        <RotateTransform/>
-                                        <TranslateTransform Y="-1.494"/>
-                                    </TransformGroup>
-                                </StackPanel.RenderTransform>
                                 <materialDesign:PackIcon Kind="BlockHelper"
                                                          Foreground="#FFF71F1F"
                                                          Height="32" 
@@ -700,7 +650,7 @@
                                     HorizontalContentAlignment="Center"
                                     VerticalContentAlignment="Center" 
                                     Margin="12,0,0,0" 
-                                    Foreground="#FF7B35FF" FontFamily="/KeepWastes;component/Fonts/#Arial Rounded MT Bold" FontWeight="Bold" Width="65"/>
+                                    Foreground="#FF1E84EF" FontFamily="/KeepWastes;component/Fonts/#Arial Rounded MT Bold" FontWeight="Bold" Width="65"/>
                             </StackPanel>
                         </ComboBoxItem>
 
@@ -719,7 +669,7 @@
                                        HorizontalContentAlignment="Center"
                                        VerticalContentAlignment="Center" 
                                        Margin="12,0,0,0" 
-                                       Foreground="#FF7B35FF" FontFamily="/KeepWastes;component/Fonts/#Arial Rounded MT Bold" FontWeight="Bold" Width="95"/>
+                                       Foreground="#FF1E84EF" FontFamily="/KeepWastes;component/Fonts/#Arial Rounded MT Bold" FontWeight="Bold" Width="95"/>
                             </StackPanel>
                         </ComboBoxItem>
 
@@ -738,7 +688,7 @@
                                    HorizontalContentAlignment="Center"
                                    VerticalContentAlignment="Center" 
                                    Margin="12,0,0,0" 
-                                   Foreground="#FF7B35FF" FontFamily="/KeepWastes;component/Fonts/#Arial Rounded MT Bold" FontWeight="Bold" Width="64"/>
+                                   Foreground="#FF1E84EF" FontFamily="/KeepWastes;component/Fonts/#Arial Rounded MT Bold" FontWeight="Bold" Width="64"/>
                             </StackPanel>
                         </ComboBoxItem>
 
@@ -757,7 +707,7 @@
                                    HorizontalContentAlignment="Center"
                                    VerticalContentAlignment="Center" 
                                    Margin="12,0,0,0" 
-                                   Foreground="#FF7B35FF" FontFamily="/KeepWastes;component/Fonts/#Arial Rounded MT Bold" FontWeight="Bold"/>
+                                   Foreground="#FF1E84EF" FontFamily="/KeepWastes;component/Fonts/#Arial Rounded MT Bold" FontWeight="Bold"/>
                             </StackPanel>
                         </ComboBoxItem>
 
@@ -776,7 +726,7 @@
                                    HorizontalContentAlignment="Center"
                                    VerticalContentAlignment="Center" 
                                    Margin="12,0,0,0" 
-                                   Foreground="#FF7B35FF" FontFamily="/KeepWastes;component/Fonts/#Arial Rounded MT Bold" FontWeight="Bold"/>
+                                   Foreground="#FF1E84EF" FontFamily="/KeepWastes;component/Fonts/#Arial Rounded MT Bold" FontWeight="Bold"/>
                             </StackPanel>
                         </ComboBoxItem>
 
@@ -795,7 +745,7 @@
                                    HorizontalContentAlignment="Center"
                                    VerticalContentAlignment="Center" 
                                    Margin="12,0,0,0" 
-                                   Foreground="#FF7B35FF" FontFamily="/KeepWastes;component/Fonts/#Arial Rounded MT Bold" FontWeight="Bold"/>
+                                   Foreground="#FF1E84EF" FontFamily="/KeepWastes;component/Fonts/#Arial Rounded MT Bold" FontWeight="Bold"/>
                             </StackPanel>
                         </ComboBoxItem>
 
@@ -814,7 +764,7 @@
                                    HorizontalContentAlignment="Center"
                                    VerticalContentAlignment="Center" 
                                    Margin="12,0,0,-2" 
-                                   Foreground="#FF7B35FF" FontFamily="/KeepWastes;component/Fonts/#Arial Rounded MT Bold" FontWeight="Bold"/>
+                                   Foreground="#FF1E84EF" FontFamily="/KeepWastes;component/Fonts/#Arial Rounded MT Bold" FontWeight="Bold"/>
                             </StackPanel>
                         </ComboBoxItem>
 
@@ -833,7 +783,7 @@
                                    HorizontalContentAlignment="Center"
                                    VerticalContentAlignment="Center" 
                                    Margin="12,0,0,0" 
-                                   Foreground="#FF7B35FF" FontFamily="/KeepWastes;component/Fonts/#Arial Rounded MT Bold" FontWeight="Bold"/>
+                                   Foreground="#FF1E84EF" FontFamily="/KeepWastes;component/Fonts/#Arial Rounded MT Bold" FontWeight="Bold"/>
                             </StackPanel>
                         </ComboBoxItem>
 
@@ -852,7 +802,7 @@
                                    HorizontalContentAlignment="Center"
                                    VerticalContentAlignment="Center" 
                                    Margin="12,0,0,0" 
-                                   Foreground="#FF7B35FF" FontFamily="/KeepWastes;component/Fonts/#Arial Rounded MT Bold" FontWeight="Bold"/>
+                                   Foreground="#FF1E84EF" FontFamily="/KeepWastes;component/Fonts/#Arial Rounded MT Bold" FontWeight="Bold"/>
                             </StackPanel>
                         </ComboBoxItem>
 
@@ -871,7 +821,7 @@
                                    HorizontalContentAlignment="Center"
                                    VerticalContentAlignment="Center" 
                                    Margin="12,0,0,0" 
-                                   Foreground="#FF7B35FF" FontFamily="/KeepWastes;component/Fonts/#Arial Rounded MT Bold" FontWeight="Bold"/>
+                                   Foreground="#FF1E84EF" FontFamily="/KeepWastes;component/Fonts/#Arial Rounded MT Bold" FontWeight="Bold"/>
                             </StackPanel>
                         </ComboBoxItem>
 
@@ -890,7 +840,7 @@
                                    HorizontalContentAlignment="Center"
                                    VerticalContentAlignment="Center" 
                                    Margin="12,0,0,0" 
-                                   Foreground="#FF7B35FF" FontFamily="/KeepWastes;component/Fonts/#Arial Rounded MT Bold" FontWeight="Bold"/>
+                                   Foreground="#FF1E84EF" FontFamily="/KeepWastes;component/Fonts/#Arial Rounded MT Bold" FontWeight="Bold"/>
                             </StackPanel>
                         </ComboBoxItem>
 
@@ -909,7 +859,7 @@
                                        HorizontalContentAlignment="Center"
                                        VerticalContentAlignment="Center" 
                                        Margin="12,0,0,0" 
-                                       Foreground="#FF7B35FF" FontFamily="/KeepWastes;component/Fonts/#Arial Rounded MT Bold" FontWeight="Bold"/>
+                                       Foreground="#FF1E84EF" FontFamily="/KeepWastes;component/Fonts/#Arial Rounded MT Bold" FontWeight="Bold"/>
                             </StackPanel>
                         </ComboBoxItem>
                     </ComboBox>
@@ -919,16 +869,7 @@
                                 VerticalAlignment="Bottom"
                                 materialDesign:HintAssist.Hint="Pick Date"
                                 Style="{StaticResource MaterialDesignFloatingHintDatePicker}" 
-                                BorderBrush="#FF16CD1C" RenderTransformOrigin="0.5,0.5" Width="549" >
-                        <DatePicker.RenderTransform>
-                            <TransformGroup>
-                                <ScaleTransform/>
-                                <SkewTransform AngleY="0.069"/>
-                                <RotateTransform/>
-                                <TranslateTransform Y="0.332"/>
-                            </TransformGroup>
-                        </DatePicker.RenderTransform>
-
+                                BorderBrush="#FF16CD1C" Width="549" >
                     </DatePicker>
 
                     <Rectangle RadiusX="18"
@@ -965,16 +906,16 @@
                            VerticalAlignment="Top"
                            Margin="201,-595,164,0"
                            Width="235" Foreground="White" 
-                           FontFamily="/KeepWastes;component/Fonts/#Courier Prime" FontWeight="Bold"/>
+                           FontFamily="/KeepWastes;component/Fonts/#DIN" FontWeight="Bold"/>
 
-                    <Button Height="46"
-                            Margin="544,-1153,0,0" 
-                            Background="{x:Null}" 
+                    <Button Height="37"
+                            Margin="563,-1142,7,0" 
+                            Background="#FF1E84EF" 
                             BorderBrush="{x:Null}" 
                             Style="{StaticResource EmptyStyle1}"
                             Foreground="{x:Null}" Click="Button_Click_1">
                         <Path Data="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z" 
-                              Fill="White" Height="26.333" Stretch="Fill" Width="24.667" />
+                              Fill="White" Height="18" Stretch="Fill" Width="18" />
                     </Button>
                 </StackPanel>
             </Popup>
@@ -987,7 +928,7 @@
                    Height="{Binding ActualHeight, ElementName=rectangle, Mode=OneWay}"
                    Margin="148,0,0,0" 
                    Grid.Row="1" 
-                   VerticalAlignment="Top" Grid.RowSpan="2" MinWidth="566"/>
+                   VerticalAlignment="Top" MinWidth="566" Width="566"/>
 
         <ListView x:Name="listView" Grid.Column="1" 
                   Grid.RowSpan="2" 
@@ -999,7 +940,7 @@
                   ScrollViewer.HorizontalScrollBarVisibility="Hidden"
                   Foreground="White"
                   Grid.ColumnSpan="2" 
-                  Margin="0,46,565,0">
+                  Margin="0,5,0,0">
             <ListViewItem x:Name="listViewItem" Height="100" 
                           Margin="0" 
                           Background="White"
@@ -1019,5 +960,6 @@
                NavigationUIVisibility="Hidden"
                Opacity="{Binding FrameOpacity}" 
                Height="0" Width="0"/>
+        <StackPanel HorizontalAlignment="Left" Height="691" Grid.Row="1" VerticalAlignment="Top" Width="255" Grid.RowSpan="2" Background="#FFF8FAFD"/>
     </Grid>
 </Window>

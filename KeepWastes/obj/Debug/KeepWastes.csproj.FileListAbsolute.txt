@@ -46,3 +46,56 @@ C:\Users\User\Documents\Программирование\KeepWastes\KeepWastes\o
 C:\Users\User\Documents\Программирование\KeepWastes\KeepWastes\obj\Debug\KeepWastes.csprojAssemblyReference.cache
 C:\Users\User\Documents\Программирование\KeepWastes\KeepWastes\obj\Debug\Material Design\Calendar.baml
 C:\Users\User\Documents\Программирование\KeepWastes\KeepWastes\obj\Debug\Material Design\ValidationError1.baml
+C:\Users\User\Desktop\KeepWastes-master\KeepWastes\bin\Debug\KeepWastes.exe.config
+C:\Users\User\Desktop\KeepWastes-master\KeepWastes\bin\Debug\KeepWastes.exe
+C:\Users\User\Desktop\KeepWastes-master\KeepWastes\bin\Debug\KeepWastes.pdb
+C:\Users\User\Desktop\KeepWastes-master\KeepWastes\bin\Debug\CommonServiceLocator.dll
+C:\Users\User\Desktop\KeepWastes-master\KeepWastes\bin\Debug\GalaSoft.MvvmLight.dll
+C:\Users\User\Desktop\KeepWastes-master\KeepWastes\bin\Debug\GalaSoft.MvvmLight.Extras.dll
+C:\Users\User\Desktop\KeepWastes-master\KeepWastes\bin\Debug\GalaSoft.MvvmLight.Platform.dll
+C:\Users\User\Desktop\KeepWastes-master\KeepWastes\bin\Debug\Google.Protobuf.dll
+C:\Users\User\Desktop\KeepWastes-master\KeepWastes\bin\Debug\MaterialDesignColors.dll
+C:\Users\User\Desktop\KeepWastes-master\KeepWastes\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\User\Desktop\KeepWastes-master\KeepWastes\bin\Debug\System.Windows.Interactivity.dll
+C:\Users\User\Desktop\KeepWastes-master\KeepWastes\bin\Debug\GalaSoft.MvvmLight.pdb
+C:\Users\User\Desktop\KeepWastes-master\KeepWastes\bin\Debug\GalaSoft.MvvmLight.xml
+C:\Users\User\Desktop\KeepWastes-master\KeepWastes\bin\Debug\GalaSoft.MvvmLight.Extras.pdb
+C:\Users\User\Desktop\KeepWastes-master\KeepWastes\bin\Debug\GalaSoft.MvvmLight.Extras.xml
+C:\Users\User\Desktop\KeepWastes-master\KeepWastes\bin\Debug\GalaSoft.MvvmLight.Platform.pdb
+C:\Users\User\Desktop\KeepWastes-master\KeepWastes\bin\Debug\GalaSoft.MvvmLight.Platform.xml
+C:\Users\User\Desktop\KeepWastes-master\KeepWastes\bin\Debug\Google.Protobuf.xml
+C:\Users\User\Desktop\KeepWastes-master\KeepWastes\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Users\User\Desktop\KeepWastes-master\KeepWastes\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\Users\User\Desktop\KeepWastes-master\KeepWastes\bin\Debug\MySql.Data.xml
+C:\Users\User\Desktop\KeepWastes-master\KeepWastes\obj\Debug\KeepWastes.csprojAssemblyReference.cache
+C:\Users\User\Desktop\KeepWastes-master\KeepWastes\obj\Debug\MainWindow.baml
+C:\Users\User\Desktop\KeepWastes-master\KeepWastes\obj\Debug\Material Design\Calendar.baml
+C:\Users\User\Desktop\KeepWastes-master\KeepWastes\obj\Debug\Material Design\ValidationError1.baml
+C:\Users\User\Desktop\KeepWastes-master\KeepWastes\obj\Debug\MainPage.g.cs
+C:\Users\User\Desktop\KeepWastes-master\KeepWastes\obj\Debug\MainWindow.g.cs
+C:\Users\User\Desktop\KeepWastes-master\KeepWastes\obj\Debug\Pages\Main.g.cs
+C:\Users\User\Desktop\KeepWastes-master\KeepWastes\obj\Debug\Pages\Stats.g.cs
+C:\Users\User\Desktop\KeepWastes-master\KeepWastes\obj\Debug\App.g.cs
+C:\Users\User\Desktop\KeepWastes-master\KeepWastes\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\User\Desktop\KeepWastes-master\KeepWastes\obj\Debug\KeepWastes_MarkupCompile.cache
+C:\Users\User\Desktop\KeepWastes-master\KeepWastes\obj\Debug\KeepWastes_MarkupCompile.lref
+C:\Users\User\Desktop\KeepWastes-master\KeepWastes\obj\Debug\App.baml
+C:\Users\User\Desktop\KeepWastes-master\KeepWastes\obj\Debug\MainPage.baml
+C:\Users\User\Desktop\KeepWastes-master\KeepWastes\obj\Debug\Pages\Main.baml
+C:\Users\User\Desktop\KeepWastes-master\KeepWastes\obj\Debug\Pages\Stats.baml
+C:\Users\User\Desktop\KeepWastes-master\KeepWastes\obj\Debug\KeepWastes.g.resources
+C:\Users\User\Desktop\KeepWastes-master\KeepWastes\obj\Debug\KeepWastes.Properties.Resources.resources
+C:\Users\User\Desktop\KeepWastes-master\KeepWastes\obj\Debug\KeepWastes.csproj.GenerateResource.cache
+C:\Users\User\Desktop\KeepWastes-master\KeepWastes\obj\Debug\KeepWastes.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\KeepWastes-master\KeepWastes\obj\Debug\KeepWastes.csproj.CopyComplete
+C:\Users\User\Desktop\KeepWastes-master\KeepWastes\obj\Debug\KeepWastes.exe
+C:\Users\User\Desktop\KeepWastes-master\KeepWastes\obj\Debug\KeepWastes.pdb
+C:\Users\User\Desktop\KeepWastes-master\KeepWastes\obj\Debug\Login_Pages\Create.g.cs
+C:\Users\User\Desktop\KeepWastes-master\KeepWastes\obj\Debug\Login_Pages\Reset.g.cs
+C:\Users\User\Desktop\KeepWastes-master\KeepWastes\obj\Debug\Login_Pages\Create.baml
+C:\Users\User\Desktop\KeepWastes-master\KeepWastes\obj\Debug\Login_Pages\Reset.baml
+C:\Users\User\Desktop\KeepWastes-master\KeepWastes\obj\Debug\Pages\Settings.g.cs
+C:\Users\User\Desktop\KeepWastes-master\KeepWastes\obj\Debug\Pages\Settings.baml
+C:\Users\User\Desktop\KeepWastes-master\KeepWastes\obj\Debug\Login_Pages\Main.g.cs
+C:\Users\User\Desktop\KeepWastes-master\KeepWastes\bin\Debug\MaterialDesignColors.pdb
+C:\Users\User\Desktop\KeepWastes-master\KeepWastes\obj\Debug\Login_Pages\Main.baml

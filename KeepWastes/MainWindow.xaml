@@ -4,14 +4,17 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:View="clr-namespace:KeepWastes.ViewModel"
         mc:Ignorable="d"
         Title="KeepWastes" 
-        Height="400" 
-        Width="660"
-        MinHeight="440"
-        MinWidth="660"
-        MaxHeight="400"
-        MaxWidth="660">
+        Height="177" 
+        Width="400"
+        MinHeight="700"
+        MinWidth="1000"
+        MaxHeight="700"
+        MaxWidth="1000" >
+
+
 
     <Window.Resources>
         <Style x:Key="ButtonStyle" TargetType="{x:Type Button}">
@@ -20,11 +23,10 @@
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="{x:Type Button}">
-                        <Border CornerRadius="18" Background="{TemplateBinding Background}">
+                        <Border CornerRadius="30" Background="{TemplateBinding Background}">
                             <ContentPresenter
                                 HorizontalAlignment="Center" 
-                                VerticalAlignment="Center"
-                                Margin="33.3,5,38,0" />
+                                VerticalAlignment="Center"/>
                         </Border>
                     </ControlTemplate>
                 </Setter.Value>
@@ -34,7 +36,7 @@
                     <BeginStoryboard>
                         <Storyboard>
                             <ColorAnimation Storyboard.TargetProperty="(Button.Background).(SolidColorBrush.Color)"
-                                            To="#FF4811B0"
+                                            To="#FF1064BB"
                                             Duration="0:0:0.2"
                                             FillBehavior="HoldEnd"/>
                         </Storyboard>
@@ -44,17 +46,7 @@
                     <BeginStoryboard>
                         <Storyboard>
                             <ColorAnimation Storyboard.TargetProperty="(Button.Background).(SolidColorBrush.Color)"
-                                            To="#FF7B35FF"
-                                            Duration="0:0:0.2"
-                                            FillBehavior="HoldEnd"/>
-                        </Storyboard>
-                    </BeginStoryboard>
-                </EventTrigger>
-                <EventTrigger RoutedEvent="Click">
-                    <BeginStoryboard>
-                        <Storyboard>
-                            <ColorAnimation Storyboard.TargetProperty="(Button.Background).(SolidColorBrush.Color)"
-                                            To="#FFA172F9"
+                                            To="#FF0055FD"
                                             Duration="0:0:0.2"
                                             FillBehavior="HoldEnd"/>
                         </Storyboard>
@@ -62,208 +54,510 @@
                 </EventTrigger>
             </Style.Triggers>
         </Style>
+
+        <Style x:Key="ButtonStyle2" TargetType="{x:Type Button}">
+            <Setter Property="Width" Value="250"/>
+            <Setter Property="Height" Value="50"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border CornerRadius="20" Background="{TemplateBinding Background}">
+                            <ContentPresenter
+                                HorizontalAlignment="Center" 
+                                VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <EventTrigger RoutedEvent="MouseEnter">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <ColorAnimation Storyboard.TargetProperty="(Button.Background).(SolidColorBrush.Color)"
+                                            To="#FF133D68"
+                                            Duration="0:0:0.2"
+                                            FillBehavior="HoldEnd"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+                <EventTrigger RoutedEvent="Button.Click" >
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <ColorAnimation Storyboard.TargetProperty="(Button.Background).(SolidColorBrush.Color)"
+                                            To="#FF1568BF"
+                                            Duration="0:0:0.2"
+                                            FillBehavior="HoldEnd"/>
+                            <DoubleAnimation
+                                                     Storyboard.TargetProperty="(UIElement.RenderTransform).(TranslateTransform.X)"
+                                                     From="270" To="0" Duration="0:0:0.450"
+                                                     AccelerationRatio="0.3" DecelerationRatio="0.69"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </Style.Triggers>
+        </Style>
+
+        <Style x:Key="ButtonStyle3" TargetType="{x:Type Button}">
+            <Setter Property="Width" Value="250"/>
+            <Setter Property="Height" Value="50"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border CornerRadius="20" Background="{TemplateBinding Background}">
+                            <ContentPresenter
+                                HorizontalAlignment="Center" 
+                                VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style x:Key="ButtonStyle4" TargetType="{x:Type Button}">
+            <Setter Property="Width" Value="250"/>
+            <Setter Property="Height" Value="50"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border CornerRadius="20" Background="{TemplateBinding Background}">
+                            <ContentPresenter
+                                HorizontalAlignment="Center" 
+                                VerticalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <EventTrigger RoutedEvent="MouseEnter">
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <ColorAnimation Duration="0:0:0.2"
+                                                        Storyboard.TargetProperty="(Button.Foreground).(SolidColorBrush.Color)"
+                                                        To="#FF12457C"/>
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </EventTrigger>
+                            <EventTrigger RoutedEvent="MouseLeave">
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <ColorAnimation Duration="0:0:0.2"
+                                                        Storyboard.TargetProperty="(Button.Foreground).(SolidColorBrush.Color)"
+                                                        To="#FF1E84EF"/>
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </EventTrigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style x:Key="RememberStyle" TargetType="{x:Type CheckBox}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type CheckBox}">
+                        <Border x:Name="RoundBorder"
+                                CornerRadius="50"
+                                BorderThickness="2"
+                                BorderBrush="#FFE6F2FF" 
+                                Margin="0,0,18,1"
+                                Background="#FFE6F2FF">
+                            <Grid>
+                                <Path Visibility="Collapsed"
+                                      Width="Auto"
+                                      x:Name="Mark"
+                                      Height="Auto"
+                                      StrokeThickness="2"
+                                      Data="M299.188,725.301c-0.202,0-2.158-0.033-2.36-0.033c-20.094-1.248-36.311-10.216-46.257-24.646L66.957,433.596
+                c-18.341-26.702-11.564-63.317,15.071-81.658c25.995-17.835,63.924-10.62,81.658,15.104l127.444,185.333L556.571,32.013
+                C571,3.76,607.987-8.31,636.273,6.12c14.094,7.181,24.579,19.454,29.468,34.524c4.889,15.07,3.607,31.119-3.607,45.212
+            l-309.709,607.28c-0.708,1.382-3.169,4.687-4.214,5.799c-0.405,0.641-1.618,2.091-2.124,2.697
+            c-2.63,3.438-6.035,7.586-10.553,11.126c-1.045,1.079-2.293,2.226-3.169,2.832c-3.203,2.158-6.103,3.169-7.822,3.776
+            c-4.214,1.922-6.406,2.899-8.833,3.573C310.549,724.525,305.054,725.301,299.188,725.301z M115.304,375.303
+            c-5.057,0-9.946,1.517-14.16,4.416c-11.329,7.788-14.194,23.398-6.373,34.761l183.58,266.958
+            c5.563,8.092,14.261,9.811,18.948,10.114h1.888c2.562,0,4.788-0.304,7.013-0.978c0.101-0.034,3.304-1.518,3.405-1.551
+            c0.876-0.438,2.023-0.877,3.203-1.315c0.303-0.27,0.607-0.539,0.843-0.708c2.326-1.72,3.979-3.742,5.361-5.597
+            c2.292-2.967,3.338-4.214,4.417-5.395l308.63-605.493c3.102-6.103,3.642-13.014,1.551-19.487
+            c-2.09-6.474-6.608-11.767-12.711-14.869c-12.44-6.338-28.118-1.011-34.355,11.193L308.291,592.901
+            c-2.697,5.293-7.99,8.766-13.924,9.17c-6.204,0.337-11.632-2.394-15.003-7.282l-143.492-208.63
+            C131.251,379.382,123.531,375.303,115.304,375.303z" Fill="#FF1E84EF" Margin="3,2.333,0,3" Stretch="Fill" Stroke="#FF1E84EF"/>
+                            </Grid>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsChecked" Value="False">
+                                <Setter TargetName="Mark" Property="Visibility" Value="Collapsed"/>
+                            </Trigger>
+                            <Trigger Property="IsChecked" Value="True">
+                                <Setter TargetName="Mark" Property="Visibility" Value="Visible" />
+                            </Trigger>
+                            <EventTrigger RoutedEvent="MouseEnter">
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <ColorAnimation Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                                        To="#FFCBDBEC"
+                                                        Storyboard.TargetName="RoundBorder"
+                                                        Duration="0:0:0.2"/>
+                                        <ColorAnimation Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)"
+                                                        To="#FFCBDBEC"
+                                                        Storyboard.TargetName="RoundBorder"
+                                                        Duration="0:0:0.2"/>
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </EventTrigger>
+                            <EventTrigger RoutedEvent="MouseLeave">
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <ColorAnimation Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                                        To="#FFE6F2FF"
+                                                        Storyboard.TargetName="RoundBorder"
+                                                        Duration="0:0:0.2"/>
+                                        <ColorAnimation Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)"
+                                                        To="#FFE6F2FF"
+                                                        Storyboard.TargetName="RoundBorder"
+                                                        Duration="0:0:0.2"/>
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </EventTrigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style x:Key="RevealStyle" TargetType="{x:Type CheckBox}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type CheckBox}">
+                        <Grid Background="White">
+                            <Path Stroke="#FF1E84EF" StrokeThickness="2">
+                                <Path.Data>
+                                    <GeometryGroup>
+                                        <EllipseGeometry Center="44,30" RadiusX="15" RadiusY="10"/>
+                                        <EllipseGeometry Center="44,30" RadiusX="6" RadiusY="6"/>
+                                    </GeometryGroup>
+                                </Path.Data>
+                            </Path>
+                            <Path Fill="#FF1E84EF">
+                                <Path.Data>
+                                    <EllipseGeometry Center="44,30" RadiusX="3" RadiusY="3"/>
+                                </Path.Data>
+                            </Path>
+                            <Path x:Name="Line"
+                                  Visibility="Collapsed" 
+                                  Stroke="#FF1E84EF" 
+                                  StrokeThickness="2">
+                                <Path.Data>
+                                    <LineGeometry StartPoint="22,21" EndPoint="67,39"/>
+                                </Path.Data>
+                            </Path>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsChecked" Value="False">
+                                <Setter Property="Visibility" Value="Collapsed" TargetName="Line"/>
+                            </Trigger>
+                            <Trigger Property="IsChecked" Value="True">
+                                <Setter Property="Visibility" Value="Visible" TargetName="Line"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
     </Window.Resources>
+    <Window.DataContext>
+        <View:MainWindowViewModel/>
+    </Window.DataContext>
+
 
 
 
     <Grid Background="White">
+        <Rectangle Fill="#FF0A3D93" HorizontalAlignment="Left" Height="669" VerticalAlignment="Top" Width="470"/>
+        <Rectangle Fill="#FF0055FD" HorizontalAlignment="Left" Height="387" Margin="-107,370,0,-88" RadiusY="2" RadiusX="2" VerticalAlignment="Top" Width="679" RenderTransformOrigin="0.5,0.5">
+            <Rectangle.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="22.523"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Rectangle.RenderTransform>
+        </Rectangle>
+        <Rectangle x:Name="rectangle" Fill="White" HorizontalAlignment="Left" Height="669" Margin="470,0,0,0" RadiusY="2" RadiusX="2" VerticalAlignment="Top" Width="522"/>
 
-        <Button x:Name ="New"
-                Margin="348,328,54,29" 
-                Background="#FF7B35FF" 
-                BorderBrush="{x:Null}" 
-                BorderThickness="0"
-                Style="{DynamicResource ButtonStyle}"
-                Foreground="#FFF5FAFF" 
-                Content="Login"
-                FontFamily="Global User Interface"
-                FontSize="25"
-                FontWeight="Bold" 
-                Height="Auto" 
-                Width="Auto" 
-                Click="New_Click"/>
-        <TextBox x:Name="PasswordBox"
-                 materialDesign:HintAssist.Hint="Password"
-                 Style="{StaticResource MaterialDesignTextBox }"
-                 Margin="393,192,80,160"
-                 Background="{x:Null}"
-                 BorderBrush="#FF7B35FF" 
-                 Foreground="#FF7B35FF" 
-                 FontFamily="/KeepWastes;component/Fonts/#Arial Rounded MT Bold" 
-                 FontSize="20" />
-
-        <Label x:Name="Label1"
-               Content="Username:"
-               Foreground="White" 
-               FontFamily="Global User Interface"
-               FontSize="20"
-               FontWeight="Light" 
-               Margin="126,110,403,259"/>
-
-        <materialDesign:PackIcon Kind="AccountCircle" 
-                                 Foreground="#FF7B35FF" 
-                                 Margin="316,106,0,0" 
-                                 Height="40" 
-                                 Width="40"/>
-        <TextBox x:Name="TextBox1"
-                 FontFamily="/KeepWastes;component/Fonts/#Arial Rounded MT Bold"
-                 FontSize="20"
-                 Margin="393,90,80,259"
-                 materialDesign:HintAssist.Hint="Login"
-                 Background="{x:Null}" 
-                 BorderBrush="#FF7B35FF" 
-                 BorderThickness="0"
-                 Style="{StaticResource MaterialDesignTextBox}"
-                 MaxLength="70"
-                 FontWeight="Bold"
-                 Foreground="#FF7B35FF" />
-
-
-
-        <Label x:Name="Label2"
-               Content="Password:"
-               Foreground="White" 
-               Margin="126,203,412,164"
-               FontFamily="Global User Interface"
-               FontSize="20"
-               FontWeight="Light"/>
-
-        <materialDesign:PackIcon Kind="LockOpen"
-                                 Foreground="#FF7B35FF" 
-                                 Margin="316,202,0,0" 
-                                 Height="40" 
-                                 Width="40"/>
-
-        <Label x:Name="Error"
-               Content=" "
-               Foreground="#FFFF5A5A"
-               FontFamily="Global User Interface"
-               FontWeight="ExtraBlack"
-               FontSize="14"
-               Margin="301,272,0,99"/>
-
-        <Rectangle Fill="#FF7B35FF" HorizontalAlignment="Left" Height="409" VerticalAlignment="Top" Width="301"/>
-
-        <materialDesign:PackIcon Kind="Monitor" Height="222" Width="220" Foreground="White" Margin="42,102,0,0"/>
 
         <Rectangle Fill="#FF15CD1C" 
                    HorizontalAlignment="Left"
-                   Height="5" 
-                   Margin="194,145,0,0" 
+                   Height="10" 
+                   Margin="307,175,0,0" 
                    RadiusY="2"
                    RadiusX="2" 
                    VerticalAlignment="Top" 
-                   Width="37"/>
+                   Width="67"/>
         <Rectangle Fill="White" 
             HorizontalAlignment="Left"
-            Height="6" 
-            Margin="79,164,0,0" 
+            Height="12" 
+            Margin="99,211,0,0" 
             RadiusY="2"
             RadiusX="2" 
             VerticalAlignment="Top" 
-            Width="22"/>
-        <Ellipse Fill="White" HorizontalAlignment="Left" Height="6" Margin="106,164,0,0" VerticalAlignment="Top" Width="6"/>
+            Width="40"/>
+        <Ellipse Fill="White" HorizontalAlignment="Left" Height="12" Margin="148,211,0,0" VerticalAlignment="Top" Width="11"/>
 
         <Rectangle Fill="White" 
                    HorizontalAlignment="Left"
-                   Height="80" 
-                   Margin="119,158,0,0"
+                   Height="136" 
+                   Margin="171,200,0,0"
                    RadiusY="1"
                    RadiusX="1" 
                    VerticalAlignment="Top"
-                   Width="2"/>
-        <Ellipse Fill="#FFFB1515" HorizontalAlignment="Left" Height="6" Margin="79,178,0,0" VerticalAlignment="Top" Width="6"/>
-        <Ellipse Fill="#FF2AFB15" HorizontalAlignment="Left" Height="6" Margin="79,189,0,0" VerticalAlignment="Top" Width="6"/>
+                   Width="4"/>
+        <Ellipse Fill="#FFFB1515" HorizontalAlignment="Left" Height="12" Margin="99,238,0,0" VerticalAlignment="Top" Width="11"/>
+
+        <materialDesign:PackIcon Kind="Account" 
+                                 Margin="505,114,0,0"
+                                 Height="46" 
+                                 Width="51" 
+                                 Foreground="#FF1E84EF"/>
+
+        <Viewbox Margin="509,240,441,378">
+            <Path Data="M12,1C5.92,1 1,5.92 1,12C1,18.08 5.92,23 12,23C18.08,23 23,18.08 23,12C23,5.92 18.08,1 12,1M12,20A8,8 0 0,1 4,12A8,8 0 0,1 12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20M13,13.5C13,14.13 13.4,14.7 14,14.91V18H10V11.91C10.78,11.64 11.19,10.8 10.93,10C10.78,9.58 10.44,9.24 10,9.09V6H14V12.09C13.4,12.3 13,12.87 13,13.5Z" 
+                  Fill="#FF1E84EF" />
+        </Viewbox>
+
+        <Ellipse Fill="#FF2AFB15" HorizontalAlignment="Left" Height="12" Margin="99,259,0,0" VerticalAlignment="Top" Width="11"/>
         <Rectangle Fill="White" 
             HorizontalAlignment="Left"
-            Height="4" 
-            Margin="89,179,0,0" 
+            Height="8" 
+            Margin="117,240,0,0" 
             RadiusY="2"
             RadiusX="2" 
             VerticalAlignment="Top" 
-            Width="13"/>
+            Width="24"/>
+        <Button x:Name ="Login"
+                Margin="553,459,107,135" 
+                Background="#FF0055FD" 
+                BorderBrush="{x:Null}" 
+                BorderThickness="0"
+                Style="{StaticResource ButtonStyle}"
+                Foreground="#FFF5FAFF" 
+                Content="LOGIN"
+                FontFamily="/KeepWastes;component/Fonts/#Arial Rounded MT Bold"
+                FontSize="36"
+                FontWeight="Bold" 
+                Height="Auto" 
+                Width="Auto" 
+                Click="Login_Click"/>
+        <TextBox x:Name="PasswordText" 
+                 HorizontalAlignment="Left" 
+                 Style="{StaticResource MaterialDesignTextBox}"
+                 Margin="574,205,0,373"
+                 TextWrapping="NoWrap"
+                 Foreground="#FF1E84EF"
+                 Width="{Binding ActualWidth, ElementName=PasswordBox, Mode=OneWay}"
+                 BorderBrush="{Binding BorderBrush, ElementName=PasswordBox}" 
+                 FontWeight="Bold"
+                 BorderThickness="0 0 0 3"
+                 FontFamily="/KeepWastes;component/Fonts/#Arial Rounded MT Bold" 
+                 FontSize="30" Background="{x:Null}" Visibility="Hidden"/>
+        <PasswordBox x:Name="PasswordBox"
+                     Margin="574,227,112,373"
+                     Background="{x:Null}"
+                     BorderBrush="#FF1E84EF" 
+                     BorderThickness="0 0 0 3"
+                     Style="{StaticResource MaterialDesignPasswordBox}"
+                     Foreground="#FF1E84EF"
+                     FontFamily="/KeepWastes;component/Fonts/#Arial Rounded MT Bold" 
+                     FontSize="30"/>
+
+        <Label x:Name="Label1"
+               Content="Username or Email"
+               Foreground="#FF55A2F3" 
+               FontFamily="/KeepWastes;component/Fonts/#Arial Rounded MT Bold"
+               FontWeight="Light" 
+               Margin="568,76,208,537" FontSize="14"/>
+
+        <TextBox x:Name="username"
+                 FontFamily="/KeepWastes;component/Fonts/#Arial Rounded MT Bold"
+                 FontSize="30"
+                 Margin="574,61,112,509"
+                 Background="{x:Null}" 
+                 BorderBrush="#FF1E84EF" 
+                 BorderThickness="0 0 0 3"
+                 Style="{StaticResource MaterialDesignTextBox}"
+                 MaxLength="70"
+                 FontWeight="Bold"
+                 Foreground="#FF1E84EF" />
+
+        <Label x:Name="Label2"
+               Content="Password"
+               Foreground="#FF55A2F3" 
+               Margin="568,211,245,395"
+               FontFamily="/KeepWastes;component/Fonts/#Arial Rounded MT Bold"
+               FontWeight="Light" FontSize="14"/>
         <Rectangle Fill="White" 
             HorizontalAlignment="Left"
-            Height="4" 
-            Margin="89,190,0,0" 
+            Height="8" 
+            Margin="117,261,0,0" 
             RadiusY="2"
             RadiusX="2" 
             VerticalAlignment="Top" 
-            Width="16"/>
+            Width="29"/>
         <Rectangle Fill="White" 
             HorizontalAlignment="Left"
-            Height="6" 
-            Margin="160,164,0,0" 
+            Height="12" 
+            Margin="246,211,0,0" 
             RadiusY="2"
             RadiusX="2" 
             VerticalAlignment="Top" 
-            Width="16"/>
+            Width="28"/>
         <Rectangle Fill="#FF3C425B" 
             HorizontalAlignment="Left"
-            Height="6" 
-            Margin="187,164,0,0" 
+            Height="12" 
+            Margin="294,211,0,0" 
             RadiusY="2"
             RadiusX="2" 
             VerticalAlignment="Top" 
-            Width="19"/>
+            Width="35"/>
         <Rectangle Fill="#FF3C425B" 
             HorizontalAlignment="Left"
-            Height="6" 
-            Margin="187,178,0,0" 
+            Height="12" 
+            Margin="294,238,0,0" 
             RadiusY="2"
             RadiusX="2" 
             VerticalAlignment="Top" 
-            Width="14"/>
+            Width="26"/>
         <Rectangle Fill="#FF3C425B" 
             HorizontalAlignment="Left"
-            Height="6" 
-            Margin="187,192,0,0" 
+            Height="12" 
+            Margin="294,265,0,0" 
             RadiusY="2"
             RadiusX="2" 
             VerticalAlignment="Top" 
-            Width="16"/>
+            Width="29"/>
         <Rectangle Fill="White" 
             HorizontalAlignment="Left"
-            Height="6" 
-            Margin="160,178,0,0" 
+            Height="12" 
+            Margin="246,238,0,0" 
             RadiusY="2"
             RadiusX="2" 
             VerticalAlignment="Top" 
-            Width="22"/>
+            Width="39"/>
         <Rectangle Fill="White" 
             HorizontalAlignment="Left"
-            Height="6" 
-            Margin="160,192,0,0" 
+            Height="12" 
+            Margin="246,265,0,0" 
             RadiusY="2"
             RadiusX="2" 
             VerticalAlignment="Top" 
-            Width="12"/>
+            Width="21"/>
         <Rectangle Fill="#FF10F305" 
             HorizontalAlignment="Left"
-            Height="6" 
-            Margin="136,164,0,0" 
+            Height="12" 
+            Margin="202,211,0,0" 
             RadiusY="2"
             RadiusX="2" 
             VerticalAlignment="Top" 
-            Width="8"/>
+            Width="15"/>
         <Rectangle Fill="#FFF305C8" 
             HorizontalAlignment="Left"
-            Height="6" 
-            Margin="136,178,0,0" 
+            Height="12" 
+            Margin="202,238,0,0" 
             RadiusY="2"
             RadiusX="2" 
             VerticalAlignment="Top" 
-            Width="8"/>
+            Width="15"/>
         <Rectangle Fill="#FF05F3F3" 
             HorizontalAlignment="Left"
-            Height="6" 
-            Margin="136,192,0,0" 
+            Height="12" 
+            Margin="202,265,0,0" 
             RadiusY="2"
             RadiusX="2" 
             VerticalAlignment="Top" 
-            Width="8"/>
+            Width="15"/>
+        <Label Content="Remember me"
+               HorizontalAlignment="Left" 
+               Margin="627,309,0,0"
+               VerticalAlignment="Top"
+               Foreground="#FF1E84EF"
+               FontFamily="/KeepWastes;component/Fonts/#HelveticaNeueCyr"
+               FontSize="20" FontWeight="Bold"/>
 
+        <CheckBox x:Name="Reveal" Content="" 
+                  HorizontalAlignment="Left"
+                  Margin="894,227,0,0"
+                  VerticalAlignment="Top"
+                  Width="88" 
+                  Style="{StaticResource RevealStyle}"
+                  RenderTransformOrigin="-1.294,1.933" 
+                  Height="64"
+                  Checked="Reveal_Checked" Background="White" BorderBrush="{x:Null}" Foreground="{x:Null}" Unchecked="Reveal_Unchecked"/>
+        <Label Content="Don't have an account?" 
+               HorizontalAlignment="Left"
+               Margin="627,577,0,52" 
+               VerticalAlignment="Center" 
+               FontFamily="/KeepWastes;component/Fonts/#HelveticaNeueCyr"
+               Foreground="#FF555A70"
+               FontSize="18" Height="40"/>
 
+        <Button x:Name ="Create"
+                Margin="620,609,163,10" 
+                Background="#FF1568BF" 
+                BorderBrush="{x:Null}" 
+                BorderThickness="0"
+                Style="{StaticResource ButtonStyle2}"
+                Foreground="#FFF5FAFF" 
+                Content="CREATE"
+                FontFamily="/KeepWastes;component/Fonts/#Arial Rounded MT Bold"
+                FontWeight="Bold" 
+                Height="Auto" 
+                Width="Auto" 
+                Command="{Binding CreateClick}"
+                Click="Create_Click" 
+                FontSize="20"/>
+        
+        <Button x:Name ="Forgot"
+                Margin="581,404,116,215" 
+                Background="White" 
+                BorderBrush="{x:Null}" 
+                BorderThickness="0"
+                Style="{StaticResource ButtonStyle4}"
+                Foreground="#FF1E84EF" 
+                Content="Forgot Password or Username?"
+                FontFamily="/KeepWastes;component/Fonts/#Arial Rounded MT Bold"
+                FontWeight="Bold" 
+                Height="Auto" 
+                Width="Auto" 
+                Command="{Binding ResetClick}"
+                Click="Forgot_Click" 
+                FontSize="14"/>
+
+        <Image Margin="60,114,582,181" 
+               Source="imac (1).png" 
+               Stretch="Fill"/>
+
+        <CheckBox x:Name="Remember"
+                  Content="" 
+                  HorizontalAlignment="Left"
+                  Margin="790,312,0,0"
+                  VerticalAlignment="Top"
+                  Width="45" 
+                  RenderTransformOrigin="-1.294,1.933" 
+                  Height="29"
+                  Style="{StaticResource RememberStyle}"
+                  Checked="Remember_Checked"
+                  Background="{x:Null}"
+                  BorderBrush="{x:Null}"
+                  Foreground="{x:Null}"/>
+        <Frame HorizontalAlignment="Left" 
+               Height="{Binding ActualHeight, ElementName=rectangle, Mode=OneWay}" 
+               Margin="470,0,0,0" 
+               x:Name="MyFrame"
+               VerticalAlignment="Top"
+               Content="{Binding CurrentPage}"
+               Width="{Binding ActualWidth, ElementName=rectangle, Mode=OneWay}"
+               NavigationUIVisibility="Hidden">
+            <Frame.RenderTransform>
+                <TranslateTransform X="0"/>
+            </Frame.RenderTransform>
+        </Frame>
 
     </Grid>
 </Window>

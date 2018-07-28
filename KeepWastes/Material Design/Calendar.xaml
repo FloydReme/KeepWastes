@@ -96,20 +96,20 @@
                                  Fill="{DynamicResource PrimaryHueLightBrush}"
                                  Opacity="0"/>
                         <Ellipse x:Name="SelectedBackground"
-                                 Fill="#FF7B35FF"
+                                 Fill="#FF1E84EF"
                                  Opacity="0" />
                         <Border BorderBrush="{TemplateBinding BorderBrush}"
                                 BorderThickness="{TemplateBinding BorderThickness}"
                                 Background="Transparent" />
                         <Ellipse x:Name="HighlightBackground"
-                                 Fill="#9965F9"
+                                 Fill="#FF1E84EF"
                                  Opacity="0" />
                         <ContentPresenter x:Name="NormalText"
                                           TextElement.Foreground="Black"
                                           HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
                                           VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
                         <Ellipse x:Name="DayButtonFocusVisual"
-                                 Stroke="#6F3FC9"
+                                 Stroke="#FF1E84EF"
                                  Opacity="0"
                                  Visibility="Collapsed"
                                  StrokeThickness="0" />
@@ -241,11 +241,11 @@
                             </VisualStateGroup>
                         </VisualStateManager.VisualStateGroups>
                         <Ellipse x:Name="TodayBackground"
-                                 Fill="#FF7B35FF"
+                                 Fill="#FF16CD1C"
                                  Opacity="0" 
                                  StrokeThickness="0"/>
                         <Ellipse x:Name="SelectedBackground"
-                                 Fill="#6F3FC9"
+                                 Fill="#FF1E84EF"
                                  Opacity="0" 
                                  StrokeThickness="0"/>
                         <Border BorderBrush="{TemplateBinding BorderBrush}"
@@ -254,7 +254,7 @@
                         <Border x:Name="HighlightingBorder"
                                 Opacity="1">
                             <Ellipse x:Name="HighlightBackground"
-                                     Fill="#9965F9"
+                                     Fill="#FF1E84EF"
                                      Opacity="0" 
                                      StrokeThickness="0"/>
                         </Border>

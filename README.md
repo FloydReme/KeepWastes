@@ -1,7 +1,7 @@
 `❗WARNING! Program is not ready yet❗`
 
 
-![alt text](https://pp.userapi.com/c845417/v845417203/a417a/8Ro1XqxS4Do.jpg)
+![alt text](https://pp.userapi.com/c849520/v849520598/29876/y4g9qSc7a7I.jpg)
 # KeepWastes 
 The best open-source application for keeping your money wastes on C#
 
@@ -25,10 +25,8 @@ Date| Event
 ----|-----
 `11.07.18`| Created README for the app
 `13.07.18` | Redesigned the app
-`19.07.18` | Created Telegram Bot for Inserting your wastes
 # To-Do
 - [x] New Design
-- [ ] Telegram Bot
 - [ ] Registration system
 - [ ] Reset Password - form
 - [ ] Create App
