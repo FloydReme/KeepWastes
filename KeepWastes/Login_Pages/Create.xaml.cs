@@ -60,15 +60,6 @@ namespace KeepWastes.Login_Pages
 
         private void Return_Click(object sender, RoutedEventArgs e)
         {
-            Storyboard sb = new Storyboard();
-            DoubleAnimation slide = new DoubleAnimation();
-            slide.From = 0;
-            slide.To = 250;
-            slide.Duration = new Duration(TimeSpan.FromMilliseconds(360));
-            Storyboard.SetTargetProperty(slide, new PropertyPath("RenderTransform.(TranslateTransform.X)"));
-            Storyboard.SetTarget(slide, MyFrame);
-            sb.Children.Add(slide);
-            sb.Begin();
             NavigationService.GoBack();
         }
     }

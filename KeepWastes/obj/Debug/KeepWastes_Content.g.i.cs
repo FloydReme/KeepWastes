@@ -8,6 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("packages/mvvmlightlibs.5.4.1/lib/xamarin.ios10/galasoft.mvvmlight.platform.dll")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("keepwastes_icon.ico")]
 
 

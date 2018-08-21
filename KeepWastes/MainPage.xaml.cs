@@ -21,6 +21,7 @@ namespace KeepWastes
         public MainPage()
         {
             InitializeComponent();
+            Dashboard.IsSelected = true;
 
             var sb = new SolidColorBrush(new Color { R = 81, G = 114, B = 141, A = 130 }); //создаю свой цвет подсказки
 
@@ -38,38 +39,20 @@ namespace KeepWastes
             mw.Show();
         }
 
-        private void Goals_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void Stats_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void Main_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-
         private void AddNew_Click(object sender, RoutedEventArgs e)
         {
-            var bg = new SolidColorBrush(new Color { R = 255, G = 191, B = 53, A = 255 });
-
-            Border.Visibility = Visibility.Visible;
-            Border.BorderBrush = bg;
+            AddPopup.Visibility = Visibility.Visible;
             Popup.IsOpen = true;
             GridMain.Opacity = 0.3;
+            GridMain.IsEnabled = false;
         }
 
         private void Save_Click(object sender, RoutedEventArgs e)
         {
-            Border.BorderBrush = null;
-            Border.Visibility = Visibility.Collapsed;
+            AddPopup.Visibility = Visibility.Collapsed;
             Popup.IsOpen = false;
             GridMain.Opacity = 1;
+            GridMain.IsEnabled = true;
 
             //Начинается работа БД 
             MySqlCommand add = con.CreateCommand();
@@ -121,15 +104,7 @@ namespace KeepWastes
             }
         }
 
-        private void AddTag_Click(object sender, RoutedEventArgs e)
-        {
-            PopupTag.IsOpen = true;
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            PopupTag.IsOpen = false;
-        }
+       
 
         private void Sum_PreviewTextInput(object sender, System.Windows.Input.TextCompositionEventArgs e)
         {
@@ -140,6 +115,9 @@ namespace KeepWastes
         {
             Popup.IsOpen = false;
             GridMain.Opacity = 1;
+            GridMain.IsEnabled = true;
         }
+
+        
     }
 }

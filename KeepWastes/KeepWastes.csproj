@@ -37,7 +37,7 @@
     <NoWin32Manifest>true</NoWin32Manifest>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>KeepWastes.ico</ApplicationIcon>
+    <ApplicationIcon>KeepWastes_icon.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
     <StartupObject>KeepWastes.App</StartupObject>
@@ -210,13 +210,13 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="KeepWastes.ico" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="imac %281%29.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Styles\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="KeepWastes_icon.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

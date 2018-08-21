@@ -245,15 +245,5 @@
             RenderTransformOrigin="-1.294,1.933" 
             Height="64"
             Checked="RevealCopy_Checked" Background="White" BorderBrush="{x:Null}" Foreground="{x:Null}" Unchecked="RevealCopy_Unchecked"/>
-
-        <Frame x:Name="MyFrame" 
-               Height="669" 
-               Width="522" NavigationUIVisibility="Hidden"
-               >
-            <Frame.RenderTransform>
-                <TranslateTransform />
-            </Frame.RenderTransform>
-        </Frame>
-
     </Grid>
 </Page>

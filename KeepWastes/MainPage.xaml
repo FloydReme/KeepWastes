@@ -7,8 +7,8 @@
         x:Class="KeepWastes.MainPage"
         mc:Ignorable="d"
         Title="KeepWastes" 
-        Height="674" 
-        Width="1242"
+        Height="176" 
+        Width="0"
         MinHeight="800"
         MinWidth="1500">
 
@@ -33,7 +33,7 @@
                             <ColorAnimation Storyboard.TargetProperty="(Control.Background).(SolidColorBrush.Color)"
                                             FillBehavior="HoldEnd"
                                             Duration="0:0:0.4"
-                                            To="#088B0C"/>
+                                            To="#FF1645A2"/>
                         </Storyboard>
                     </BeginStoryboard>
                 </EventTrigger>
@@ -43,17 +43,7 @@
                             <ColorAnimation Storyboard.TargetProperty="(Control.Background).(SolidColorBrush.Color)"
                                             FillBehavior="HoldEnd"
                                             Duration="0:0:0.4"
-                                            To="#FF16CD1C"/>
-                        </Storyboard>
-                    </BeginStoryboard>
-                </EventTrigger>
-                <EventTrigger RoutedEvent="ButtonBase.Click">
-                    <BeginStoryboard>
-                        <Storyboard>
-                            <ColorAnimation Storyboard.TargetProperty="(Control.Background).(SolidColorBrush.Color)"
-                                            FillBehavior="HoldEnd"
-                                            Duration="0:0:0.4"
-                                            To="#105B12"/>
+                                            To="#FF0055FD"/>
                         </Storyboard>
                     </BeginStoryboard>
                 </EventTrigger>
@@ -107,42 +97,7 @@
         </Style>
 
 
-        <Style x:Key="ButtonStyle3" TargetType="{x:Type Button}">
-            <Setter Property="FontFamily" Value="/Fonts/#DIN Regular"/>
-            <Setter Property="Template">
-                <Setter.Value>
-                    <ControlTemplate TargetType="{x:Type Button}">
-                        <Border Background="{TemplateBinding Background}" CornerRadius="18">
-                            <ContentPresenter
-                                HorizontalAlignment="Center"
-                                VerticalAlignment="Center"/>
-                        </Border>
-                    </ControlTemplate>
-                </Setter.Value>
-            </Setter>
-            <Style.Triggers>
-                <EventTrigger RoutedEvent="UIElement.MouseEnter">
-                    <BeginStoryboard>
-                        <Storyboard>
-                            <ColorAnimation Storyboard.TargetProperty="(Control.Background).(SolidColorBrush.Color)"
-                                            FillBehavior="HoldEnd"
-                                            Duration="0:0:0.2"
-                                            To="#0A4D93"/>
-                        </Storyboard>
-                    </BeginStoryboard>
-                </EventTrigger>
-                <EventTrigger RoutedEvent="UIElement.MouseLeave">
-                    <BeginStoryboard>
-                        <Storyboard>
-                            <ColorAnimation Storyboard.TargetProperty="(Control.Background).(SolidColorBrush.Color)"
-                                            FillBehavior="HoldEnd"
-                                            Duration="0:0:0.2"
-                                            To="#FF1E84EF"/>
-                        </Storyboard>
-                    </BeginStoryboard>
-                </EventTrigger>
-            </Style.Triggers>
-        </Style>
+
 
         <Style x:Key="ButtonStyle4" TargetType="{x:Type Button}">
             <Setter Property="Template">
@@ -303,56 +258,11 @@
             </Setter>
         </Style>
 
-        <Style x:Key="AddStyle" TargetType="{x:Type Button}">
-            <Setter Property="Template">
-                <Setter.Value>
-                    <ControlTemplate TargetType="{x:Type Button}">
-                        <Grid MaxWidth="24" MaxHeight="24" Background="{x:Null}">
-                            <Ellipse Fill="White"/>
-                            <materialDesign:PackIcon Kind="Plus"
-                                                     VerticalAlignment="Center"
-                                                     HorizontalAlignment="Center"
-                                                     Height="24"
-                                                     Width="24"/>
-                        </Grid>
-                    </ControlTemplate>
-                </Setter.Value>
-            </Setter>
-        </Style>
-
-        <Style x:Key="EmptyStyle" TargetType="{x:Type Button}">
-            <Setter Property="Template">
-                <Setter.Value>
-                    <ControlTemplate TargetType="{x:Type Button}">
-                        <Grid>
-                            <Ellipse Fill="White"/>
-                            <materialDesign:PackIcon Kind="Plus" 
-                                                     RenderTransformOrigin="0.5,0.5"
-                                                     Foreground="#FF1E84EF"
-                                                     Height="30"
-                                                     Width="30"
-                                                     HorizontalAlignment="Right"
-                                                     Margin="0,1,-1,0">
-                                <materialDesign:PackIcon.RenderTransform>
-                                    <TransformGroup>
-                                        <ScaleTransform/>
-                                        <SkewTransform/>
-                                        <RotateTransform Angle="46.245"/>
-                                        <TranslateTransform/>
-                                    </TransformGroup>
-                                </materialDesign:PackIcon.RenderTransform>
-                            </materialDesign:PackIcon>
-                        </Grid>
-                    </ControlTemplate>
-                </Setter.Value>
-            </Setter>
-        </Style>
-
         <Style x:Key="EmptyStyle1" TargetType="{x:Type Button}">
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="{x:Type Button}">
-                        <Grid Background="#FF1E84EF">
+                        <Grid Background="#FF0055FD">
                             <Path Data="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z" 
                                   Fill="White" Height="26.333" Stretch="Fill" Width="24.667" />
                         </Grid>
@@ -368,7 +278,6 @@
                     <ControlTemplate TargetType="{x:Type ListViewItem}">
                         <Grid>
                             <Border Background="{TemplateBinding Background}"/>
-
                         </Grid>
                     </ControlTemplate>
                 </Setter.Value>
@@ -402,157 +311,51 @@
 
 
 
-
+        <Style x:Key="MenuItemStyle" TargetType="{x:Type ListViewItem}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type ListViewItem}">
+                        <Grid>
+                            <Border Background="{TemplateBinding Background}">
+                                <ContentPresenter/>
+                            </Border>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <EventTrigger RoutedEvent="Selected">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <ColorAnimation To="#FF0055FD"
+                                            Duration="0:0:0.1"
+                                            Storyboard.TargetProperty="(ListViewItem.Foreground).(SolidColorBrush.Color)"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+                <EventTrigger RoutedEvent="Unselected">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <ColorAnimation To="#FFD4D8DE"
+                                            Duration="0:0:0.1"
+                                            Storyboard.TargetProperty="(ListViewItem.Foreground).(SolidColorBrush.Color)"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </Style.Triggers>
+        </Style>
     </Window.Resources>
 
 
-
-
-
-
-
-
-
-
-
-
-    <Grid Background="#FFF8FAFD" x:Name="GridMain">
+    <Grid Background="White" x:Name="GridMain">
         <Grid.RowDefinitions>
             <RowDefinition Height="60*"/>
-            <RowDefinition Height="193*"/>
-            <RowDefinition Height="516*"/>
+            <RowDefinition Height="709*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="255*"/>
-            <ColumnDefinition Width="523*"/>
-            <ColumnDefinition Width="714*"/>
+            <ColumnDefinition Width="199*"/>
+            <ColumnDefinition Width="1293*"/>
         </Grid.ColumnDefinitions>
-
-        <Grid Grid.Row="0" Grid.ColumnSpan="3">
-            <StackPanel Orientation="Horizontal" 
-                        Background="#FFF8FAFD" 
-                        Margin="4,84,260,-84" d:IsHidden="True">
-                <Button x:Name="Main"
-                    Height="50" 
-                    BorderBrush="{x:Null}"
-                    Width="280" 
-                    Background="#FF1E84EF"
-                    Style="{StaticResource ButtonStyle3}"
-                    Margin="120,0,0,0"
-                    Content="MAIN PAGE"
-                    Foreground="White"
-                    FontSize="30" 
-                    Command="{Binding MainClick}"
-                    Click="Main_Click" FontFamily="/KeepWastes;component/Fonts/#DIN" FontWeight="Bold"/>
-                <Button x:Name="Stats"
-                    Height="50" 
-                    BorderBrush="{x:Null}"
-                    Width="280" 
-                    Background="#FF1E84EF"
-                    Style="{StaticResource ButtonStyle3}"
-                    Margin="20,0,0,0"
-                    HorizontalAlignment="Left"
-                    Content="STATS"
-                    Foreground="White"
-                    FontSize="30" 
-                    Command="{Binding StatsClick}"
-                    Click="Stats_Click" FontFamily="/KeepWastes;component/Fonts/#DIN" FontWeight="Bold"/>
-                <Button x:Name="Settings" 
-                    Height="54" 
-                    Style="{StaticResource ButtonStyle3}"
-                    HorizontalAlignment="Right"
-                    Foreground="White"
-                    FontSize="30"
-                    Background="#FF1E84EF"
-                    FontFamily="/KeepWastes;component/Fonts/#DIN"
-                    BorderBrush="{x:Null}"
-                    Width="280" 
-                    Margin="20,0,0,0"
-                    Content="SETTINGS" 
-                    Command="{Binding GoalsClick}"
-                    Click="Goals_Click" FontWeight="Bold"/>
-            </StackPanel>
-        </Grid>
-
-
-
-
-        <Label Content="TAGS" 
-                   HorizontalAlignment="Left"
-                   VerticalAlignment="Center" Margin="14,22,0,127" 
-                   Background="{x:Null}" 
-                   Foreground="#FFECECEC" 
-                   FontFamily="/KeepWastes;component/Fonts/#Arial Rounded MT Bold" 
-                   FontWeight="Bold" FontSize="30" Grid.Row="1" Height="44" Width="94" d:IsHidden="True"/>
-
-        <Border Margin="0,74,0,267" 
-                Grid.RowSpan="2" 
-                Grid.Row="1"
-                x:Name="Border2" d:IsHidden="True">
-            <Popup x:Name="PopupTag"
-                   AllowsTransparency="True"
-                   ClipToBounds="True"
-                   PopupAnimation="Fade" 
-                   Placement="Center">
-                <StackPanel Background="White" 
-                            Height="350"
-                            Width="{Binding ActualWidth, ElementName=Border2, Mode=OneWay}">
-                    <Rectangle RadiusX="1"
-                               RadiusY="1" 
-                               Fill="#FF1E84EF"
-                               Height="4" 
-                               Margin="0,35,0,0"/>
-                    <Button Height="32" 
-                            Margin="218,-41,1,0" 
-                            BorderBrush="{x:Null}" 
-                            Foreground="{x:Null}" 
-                            Background="{x:Null}" 
-                            Style="{StaticResource EmptyStyle}"
-                            Click="Button_Click"/>
-                    <Label Content="New Tag"
-                           FontSize="20" 
-                           Foreground="#FF1E84EF" 
-                           FontFamily="/KeepWastes;component/Fonts/#Arial Rounded MT Bold" 
-                           Margin="6,-38,133,0"/>
-                    <TextBox Height="23" 
-                             TextWrapping="Wrap" 
-                             BorderThickness="0"
-                             BorderBrush="{x:Null}" 
-                             Background="{x:Null}" 
-                             Foreground="#FF7B35FF" 
-                             Margin="10,20,10,0"
-                             FontFamily="/KeepWastes;component/Fonts/#DIN"
-                             FontSize="16" FontWeight="Bold"/>
-                    <Rectangle RadiusX="1"
-                        RadiusY="1" 
-                        Fill="#FF1E84EF"
-                        Height="4" 
-                        Margin="10,0"/>
-                    <Button Height="37"
-                            BorderBrush="{x:Null}" 
-                            Foreground="White" 
-                            BorderThickness="0"
-                            Content="SAVE"
-                            Background="#FF16CD1C" 
-                            Margin="50,215,45,0" 
-                            FontFamily="/KeepWastes;component/Fonts/#Courier Prime"
-                            FontSize="24"
-                            Style="{StaticResource ButtonStyle4}" Padding="2,1,1,1" FontWeight="Bold"/>
-                </StackPanel>
-            </Popup>
-        </Border>
-
-
-
-        <Button x:Name="AddTag"
-                Margin="0,23,17,118"
-                Background="White" 
-                BorderBrush="{x:Null}" 
-                Grid.Row="1" 
-                HorizontalAlignment="Right"
-                Style="{StaticResource AddStyle}"
-                Foreground="#FF1E84EF" 
-                Click="AddTag_Click" Width="24" d:IsHidden="True"/>
 
 
         <Button x:Name="AddNewWaste"
@@ -566,319 +369,315 @@
                 Foreground="#F5FAFF"
                 FontFamily="Global User Interface"
                 FontSize="60" 
-                Width="242" Click="AddNew_Click" Grid.Column="2"/>
+                Width="242" Click="AddNew_Click" Grid.Column="1"/>
 
 
 
 
         <Button x:Name="Logout" 
-                Background="#FFF8FAFD"
+                Background="White"
                 BorderBrush="{x:Null}" 
                 Foreground="{x:Null}"
                 Style="{StaticResource ButtonStyle2}"
-                HorizontalAlignment="Left"
+                HorizontalAlignment="Center"
                 Click="Logout_Click" 
-                Width="200">
-            <materialDesign:PackIcon Kind="AccountSwitch" 
+                Width="199" VerticalAlignment="Center" Margin="0,2,0,0" Height="58">
+            <materialDesign:PackIcon Kind="Power" 
                                      Foreground="#FF0055FD" 
-                                     Height="60"
+                                     Height="58"
                                      HorizontalAlignment="Center"
                                      VerticalAlignment="Center"
-                                     Width="87" 
-                                     Margin="39,3,41,1"/>
+                                     Width="Auto" Margin="70,0,69,2"/>
         </Button>
 
 
-        <Border CornerRadius="18"
-                    x:Name="Border"
-                    Grid.Row="1"
-                    Grid.RowSpan="2"
-                    BorderBrush="{x:Null}"              
-                    Height="600"
-                    Width="680"
-                    HorizontalAlignment="Center"
-                    VerticalAlignment="Center" 
-                Margin="209,50,348,59" 
-                Grid.Column="1" 
-                Grid.ColumnSpan="2">
+        <Border x:Name="AddPopup"
+                Grid.Row="1"         
+                Height="600"
+                Width="680"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center" 
+                Margin="233,58,380,51" 
+                Grid.Column="1">
             <Popup x:Name="Popup"
                    AllowsTransparency="True"
                    ClipToBounds="True"
                    Placement="Center" 
-                   PopupAnimation="Fade" Margin="0,0,0,-18">
-                <StackPanel Orientation="Vertical"  
-                            Background="#FF1E84EF"
+                   PopupAnimation="Fade" 
+                   Margin="0,0,0,-18">
+                <Border Background="#FF0055FD" BorderBrush="#FF0055FD" BorderThickness="6" CornerRadius="18">
+                    <StackPanel Orientation="Vertical"  
+                            Background="#FF0055FD"
                             Width="600" 
                             Height="618">
-
-                    <Rectangle RadiusX="18"
+                        <Rectangle RadiusX="18"
                            RadiusY="18"
                            Fill="White" 
                            Height="58" 
                            Margin="24,51,27,0"
                            x:Name="Rectangle1"/>
-                    <TextBox x:Name="Sum" 
+                        <TextBox x:Name="Sum" 
                          Height="44"
                          BorderBrush="{x:Null}" 
                          SelectionBrush="{x:Null}" 
                          FontSize="30" 
-                         Foreground="#FF121E32" 
-                         Margin="36,-56,36,0" 
+                         Foreground="#FF68696C" 
+                         Margin="36,-45,36,0" 
                          Background="{x:Null}"
                          BorderThickness="0" 
                              GotFocus="Sum_GotFocus" 
-                             LostFocus="Sum_LostFocus" FontFamily="/KeepWastes;component/Fonts/#Courier Prime" FontWeight="Bold" PreviewTextInput="Sum_PreviewTextInput"/>
+                             LostFocus="Sum_LostFocus" FontFamily="/KeepWastes;component/Fonts/#HelveticaNeueCyr" PreviewTextInput="Sum_PreviewTextInput"/>
 
-                    <ComboBox x:Name="ComboBox" BorderBrush="{x:Null}" 
+                        <ComboBox x:Name="ComboBox" BorderBrush="{x:Null}" 
                               Height="58"
                               BorderThickness="0" 
                               Style="{StaticResource ComboBoxStyle}"
                               Margin="24,51,28,0" 
                               MaxDropDownHeight="378" Width="549">
-                        <ComboBoxItem x:Name="None" BorderThickness="0"
+                            <ComboBoxItem x:Name="None" BorderThickness="0"
                                       BorderBrush="{x:Null}" 
                                       Height="42"
                                       Style="{StaticResource ComboBoxItemStyle}">
-                            <StackPanel Orientation="Horizontal" Width="118" Margin="0,3,0,-1" RenderTransformOrigin="0.5,0.5">
-                                <materialDesign:PackIcon Kind="BlockHelper"
+                                <StackPanel Orientation="Horizontal" Width="118" Margin="0,3,0,-1" RenderTransformOrigin="0.5,0.5">
+                                    <materialDesign:PackIcon Kind="BlockHelper"
                                                          Foreground="#FFF71F1F"
                                                          Height="32" 
                                                          Width="32" 
                                                          Margin="5,0,0,0"/>
-                                <Label  Content="None"
+                                    <Label  Content="None"
                                     FontSize="20"
                                     HorizontalContentAlignment="Center"
                                     VerticalContentAlignment="Center" 
                                     Margin="12,0,0,0" 
                                     Foreground="#FF1E84EF" FontFamily="/KeepWastes;component/Fonts/#Arial Rounded MT Bold" FontWeight="Bold" Width="65"/>
-                            </StackPanel>
-                        </ComboBoxItem>
+                                </StackPanel>
+                            </ComboBoxItem>
 
-                        <ComboBoxItem x:Name="Vehicles" BorderThickness="0"
+                            <ComboBoxItem x:Name="Vehicles" BorderThickness="0"
                                       BorderBrush="{x:Null}" 
                                       Height="42"
                                       Style="{StaticResource ComboBoxItemStyle}">
-                            <StackPanel Orientation="Horizontal" Width="141" Height="42">
-                                <materialDesign:PackIcon Kind="Bus" 
+                                <StackPanel Orientation="Horizontal" Width="141" Height="42">
+                                    <materialDesign:PackIcon Kind="Bus" 
                                                          Foreground="#FF245FC5" 
                                                          Height="32" 
                                                          Width="32" 
                                                          Margin="3,5,0,0"/>
-                                <Label Content="Vehicles"
+                                    <Label Content="Vehicles"
                                        FontSize="20"
                                        HorizontalContentAlignment="Center"
                                        VerticalContentAlignment="Center" 
                                        Margin="12,0,0,0" 
                                        Foreground="#FF1E84EF" FontFamily="/KeepWastes;component/Fonts/#Arial Rounded MT Bold" FontWeight="Bold" Width="95"/>
-                            </StackPanel>
-                        </ComboBoxItem>
+                                </StackPanel>
+                            </ComboBoxItem>
 
-                        <ComboBoxItem x:Name="Food"  BorderThickness="0"
+                            <ComboBoxItem x:Name="Food"  BorderThickness="0"
                                        BorderBrush="{x:Null}" 
                                        Height="42"
                                        Style="{StaticResource ComboBoxItemStyle}">
-                            <StackPanel Orientation="Horizontal" Width="116" Height="42">
-                                <materialDesign:PackIcon Kind="Food" 
+                                <StackPanel Orientation="Horizontal" Width="116" Height="42">
+                                    <materialDesign:PackIcon Kind="Food" 
                                                      Foreground="#FF7A35BF" 
                                                      Height="32" 
                                                      Width="32" 
                                                      Margin="3,5,0,0"/>
-                                <Label Content="Food"
+                                    <Label Content="Food"
                                    FontSize="20"
                                    HorizontalContentAlignment="Center"
                                    VerticalContentAlignment="Center" 
                                    Margin="12,0,0,0" 
                                    Foreground="#FF1E84EF" FontFamily="/KeepWastes;component/Fonts/#Arial Rounded MT Bold" FontWeight="Bold" Width="64"/>
-                            </StackPanel>
-                        </ComboBoxItem>
+                                </StackPanel>
+                            </ComboBoxItem>
 
-                        <ComboBoxItem x:Name="Clothes"  BorderThickness="0"
+                            <ComboBoxItem x:Name="Clothes"  BorderThickness="0"
                                        BorderBrush="{x:Null}" 
                                        Height="42"
                                        Style="{StaticResource ComboBoxItemStyle}">
-                            <StackPanel Orientation="Horizontal" Width="134" Height="42">
-                                <materialDesign:PackIcon Kind="Hanger"
+                                <StackPanel Orientation="Horizontal" Width="134" Height="42">
+                                    <materialDesign:PackIcon Kind="Hanger"
                                                      Foreground="#FF00EE8C" 
                                                      Height="32" 
                                                      Width="32" 
                                                      Margin="3,5,0,0"/>
-                                <Label Content="Clothes"
+                                    <Label Content="Clothes"
                                    FontSize="20"
                                    HorizontalContentAlignment="Center"
                                    VerticalContentAlignment="Center" 
                                    Margin="12,0,0,0" 
                                    Foreground="#FF1E84EF" FontFamily="/KeepWastes;component/Fonts/#Arial Rounded MT Bold" FontWeight="Bold"/>
-                            </StackPanel>
-                        </ComboBoxItem>
+                                </StackPanel>
+                            </ComboBoxItem>
 
-                        <ComboBoxItem x:Name="Travelling" BorderThickness="0"
+                            <ComboBoxItem x:Name="Travelling" BorderThickness="0"
                                       BorderBrush="{x:Null}" 
                                       Height="42"
                                       Style="{StaticResource ComboBoxItemStyle}">
-                            <StackPanel Orientation="Horizontal" Width="150" Height="42">
-                                <materialDesign:PackIcon Kind="WalletTravel"
+                                <StackPanel Orientation="Horizontal" Width="150" Height="42">
+                                    <materialDesign:PackIcon Kind="WalletTravel"
                                                      Foreground="#FFF35900" 
                                                      Height="32" 
                                                      Width="32" 
                                                      Margin="3,5,0,0"/>
-                                <Label Content="Travelling"
+                                    <Label Content="Travelling"
                                    FontSize="20"
                                    HorizontalContentAlignment="Center"
                                    VerticalContentAlignment="Center" 
                                    Margin="12,0,0,0" 
                                    Foreground="#FF1E84EF" FontFamily="/KeepWastes;component/Fonts/#Arial Rounded MT Bold" FontWeight="Bold"/>
-                            </StackPanel>
-                        </ComboBoxItem>
+                                </StackPanel>
+                            </ComboBoxItem>
 
-                        <ComboBoxItem x:Name="Cafes" BorderThickness="0"
+                            <ComboBoxItem x:Name="Cafes" BorderThickness="0"
                                       BorderBrush="{x:Null}" 
                                       Height="42"
                                       Style="{StaticResource ComboBoxItemStyle}">
-                            <StackPanel Orientation="Horizontal" Width="279" Height="42">
-                                <materialDesign:PackIcon Kind="FoodForkDrink"
+                                <StackPanel Orientation="Horizontal" Width="279" Height="42">
+                                    <materialDesign:PackIcon Kind="FoodForkDrink"
                                                      Foreground="#FF3ABF13" 
                                                      Height="32" 
                                                      Width="32" 
                                                      Margin="3,5,0,0"/>
-                                <Label Content="Cafes and Restaurants"
+                                    <Label Content="Cafes and Restaurants"
                                    FontSize="20"
                                    HorizontalContentAlignment="Center"
                                    VerticalContentAlignment="Center" 
                                    Margin="12,0,0,0" 
                                    Foreground="#FF1E84EF" FontFamily="/KeepWastes;component/Fonts/#Arial Rounded MT Bold" FontWeight="Bold"/>
-                            </StackPanel>
-                        </ComboBoxItem>
+                                </StackPanel>
+                            </ComboBoxItem>
 
-                        <ComboBoxItem x:Name="Entertainment" BorderThickness="0"
+                            <ComboBoxItem x:Name="Entertainment" BorderThickness="0"
                                       BorderBrush="{x:Null}" 
                                       Height="42"
                                       Style="{StaticResource ComboBoxItemStyle}">
-                            <StackPanel Orientation="Horizontal" Width="195" Height="42">
-                                <materialDesign:PackIcon Kind="XboxController"
+                                <StackPanel Orientation="Horizontal" Width="195" Height="42">
+                                    <materialDesign:PackIcon Kind="XboxController"
                                                      Foreground="#FF410C8D" 
                                                      Height="32" 
                                                      Width="32" 
                                                      Margin="3,5,0,0"/>
-                                <Label Content="Entertainment"
+                                    <Label Content="Entertainment"
                                    FontSize="20"
                                    HorizontalContentAlignment="Center"
                                    VerticalContentAlignment="Center" 
                                    Margin="12,0,0,-2" 
                                    Foreground="#FF1E84EF" FontFamily="/KeepWastes;component/Fonts/#Arial Rounded MT Bold" FontWeight="Bold"/>
-                            </StackPanel>
-                        </ComboBoxItem>
+                                </StackPanel>
+                            </ComboBoxItem>
 
-                        <ComboBoxItem x:Name="Medicine" BorderThickness="0"
+                            <ComboBoxItem x:Name="Medicine" BorderThickness="0"
                                       BorderBrush="{x:Null}" 
                                       Height="42"
                                       Style="{StaticResource ComboBoxItemStyle}">
-                            <StackPanel Orientation="Horizontal" Width="150" Height="42">
-                                <materialDesign:PackIcon Kind="MedicalBag"
+                                <StackPanel Orientation="Horizontal" Width="150" Height="42">
+                                    <materialDesign:PackIcon Kind="MedicalBag"
                                                      Foreground="#FF2FC3E4" 
                                                      Height="32" 
                                                      Width="32" 
                                                      Margin="3,5,0,0"/>
-                                <Label Content="Medicine"
+                                    <Label Content="Medicine"
                                    FontSize="20"
                                    HorizontalContentAlignment="Center"
                                    VerticalContentAlignment="Center" 
                                    Margin="12,0,0,0" 
                                    Foreground="#FF1E84EF" FontFamily="/KeepWastes;component/Fonts/#Arial Rounded MT Bold" FontWeight="Bold"/>
-                            </StackPanel>
-                        </ComboBoxItem>
+                                </StackPanel>
+                            </ComboBoxItem>
 
-                        <ComboBoxItem x:Name="Gadgets" BorderThickness="0"
+                            <ComboBoxItem x:Name="Gadgets" BorderThickness="0"
                                       BorderBrush="{x:Null}" 
                                       Height="42"
                                       Style="{StaticResource ComboBoxItemStyle}">
-                            <StackPanel Orientation="Horizontal" Width="135" Height="42">
-                                <materialDesign:PackIcon Kind="Camera"
+                                <StackPanel Orientation="Horizontal" Width="135" Height="42">
+                                    <materialDesign:PackIcon Kind="Camera"
                                                      Foreground="#FFF01B25" 
                                                      Height="32" 
                                                      Width="32" 
                                                      Margin="3,5,0,0"/>
-                                <Label Content="Gadgets"
+                                    <Label Content="Gadgets"
                                    FontSize="20"
                                    HorizontalContentAlignment="Center"
                                    VerticalContentAlignment="Center" 
                                    Margin="12,0,0,0" 
                                    Foreground="#FF1E84EF" FontFamily="/KeepWastes;component/Fonts/#Arial Rounded MT Bold" FontWeight="Bold"/>
-                            </StackPanel>
-                        </ComboBoxItem>
+                                </StackPanel>
+                            </ComboBoxItem>
 
-                        <ComboBoxItem x:Name="Cinema" BorderThickness="0"
+                            <ComboBoxItem x:Name="Cinema" BorderThickness="0"
                                       BorderBrush="{x:Null}" 
                                       Height="42"
                                       Style="{StaticResource ComboBoxItemStyle}">
-                            <StackPanel Orientation="Horizontal" Width="328" Height="42">
-                                <materialDesign:PackIcon Kind="Theater"
+                                <StackPanel Orientation="Horizontal" Width="328" Height="42">
+                                    <materialDesign:PackIcon Kind="Theater"
                                                      Foreground="#FF07F568" 
                                                      Height="32" 
                                                      Width="32"
                                                      Margin="3,5,0,0"/>
-                                <Label Content="Cinema and Theater"
+                                    <Label Content="Cinema and Theater"
                                    FontSize="20"
                                    HorizontalContentAlignment="Center"
                                    VerticalContentAlignment="Center" 
                                    Margin="12,0,0,0" 
                                    Foreground="#FF1E84EF" FontFamily="/KeepWastes;component/Fonts/#Arial Rounded MT Bold" FontWeight="Bold"/>
-                            </StackPanel>
-                        </ComboBoxItem>
+                                </StackPanel>
+                            </ComboBoxItem>
 
-                        <ComboBoxItem x:Name="Subscriptions" BorderThickness="0"
+                            <ComboBoxItem x:Name="Subscriptions" BorderThickness="0"
                                       BorderBrush="{x:Null}" 
                                       Height="42"
                                       Style="{StaticResource ComboBoxItemStyle}">
-                            <StackPanel Orientation="Horizontal" Width="212" Height="42">
-                                <materialDesign:PackIcon Kind="Netflix"
+                                <StackPanel Orientation="Horizontal" Width="212" Height="42">
+                                    <materialDesign:PackIcon Kind="Netflix"
                                                      Foreground="#FFF92D00" 
                                                      Height="32" 
                                                      Width="32" 
                                                      Margin="3,5,0,0"/>
-                                <Label Content="Subscriptions"
+                                    <Label Content="Subscriptions"
                                    FontSize="20"
                                    HorizontalContentAlignment="Center"
                                    VerticalContentAlignment="Center" 
                                    Margin="12,0,0,0" 
                                    Foreground="#FF1E84EF" FontFamily="/KeepWastes;component/Fonts/#Arial Rounded MT Bold" FontWeight="Bold"/>
-                            </StackPanel>
-                        </ComboBoxItem>
+                                </StackPanel>
+                            </ComboBoxItem>
 
-                        <ComboBoxItem x:Name="Other" BorderThickness="0"
+                            <ComboBoxItem x:Name="Other" BorderThickness="0"
                                       BorderBrush="{x:Null}" 
                                       Height="42"
                                       Style="{StaticResource ComboBoxItemStyle}">
-                            <StackPanel Orientation="Horizontal" Width="151" Height="42">
-                                <materialDesign:PackIcon Kind="TrafficLight"
+                                <StackPanel Orientation="Horizontal" Width="151" Height="42">
+                                    <materialDesign:PackIcon Kind="TrafficLight"
                                                          Foreground="#FF00CCF9" 
                                                          Height="32" 
                                                          Width="32" 
                                                          Margin="3,5,0,0"/>
-                                <Label Content="Other"
+                                    <Label Content="Other"
                                        FontSize="20"
                                        HorizontalContentAlignment="Center"
                                        VerticalContentAlignment="Center" 
                                        Margin="12,0,0,0" 
                                        Foreground="#FF1E84EF" FontFamily="/KeepWastes;component/Fonts/#Arial Rounded MT Bold" FontWeight="Bold"/>
-                            </StackPanel>
-                        </ComboBoxItem>
-                    </ComboBox>
+                                </StackPanel>
+                            </ComboBoxItem>
+                        </ComboBox>
 
-                    <DatePicker x:Name="Calendar" Margin="24,44,27,0"
+                        <DatePicker x:Name="Calendar" Margin="24,44,27,0"
                                 Height="50"
                                 VerticalAlignment="Bottom"
                                 materialDesign:HintAssist.Hint="Pick Date"
                                 Style="{StaticResource MaterialDesignFloatingHintDatePicker}" 
                                 BorderBrush="#FF16CD1C" Width="549" >
-                    </DatePicker>
+                        </DatePicker>
 
-                    <Rectangle RadiusX="18"
+                        <Rectangle RadiusX="18"
                            RadiusY="18"
                            Fill="White" 
                            Height="173" 
                            Margin="24,45,27,0"
                            x:Name="Rectangle3"/>
-                    <TextBox x:Name="Description" 
+                        <TextBox x:Name="Description" 
                          Height="158" 
                          BorderBrush="{x:Null}" 
                          FontSize="30" 
@@ -888,7 +687,7 @@
                          Background="{x:Null}"
                          BorderThickness="0" 
                          SelectionBrush="#FF38BEFD" GotFocus="Description_GotFocus" LostFocus="Description_LostFocus"/>
-                    <Button x:Name="Save"
+                        <Button x:Name="Save"
                         Content="Save" 
                         Height="56"
                         Margin="108,13,108,0" 
@@ -899,7 +698,7 @@
                         FontWeight="Bold" 
                         Click="Save_Click"
                         Style="{StaticResource ButtonStyle4}" />
-                    <Label Content="Create a new Waste" 
+                        <Label Content="Create a new Waste" 
                            Height="41"
                            FontSize="20"
                            HorizontalAlignment="Center" 
@@ -908,21 +707,23 @@
                            Width="235" Foreground="White" 
                            FontFamily="/KeepWastes;component/Fonts/#DIN" FontWeight="Bold"/>
 
-                    <Button Height="37"
+                        <Button Height="37"
                             Margin="563,-1142,7,0" 
                             Background="#FF1E84EF" 
                             BorderBrush="{x:Null}" 
                             Style="{StaticResource EmptyStyle1}"
                             Foreground="{x:Null}" Click="Button_Click_1">
-                        <Path Data="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z" 
+                            <Path Data="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z" 
                               Fill="White" Height="18" Stretch="Fill" Width="18" />
-                    </Button>
-                </StackPanel>
+                        </Button>
+                    </StackPanel>
+                </Border>
+
             </Popup>
         </Border>
 
         <Rectangle x:Name="rectangle" 
-                   Grid.Column="2"
+                   Grid.Column="1"
                    Fill="WhiteSmoke" 
                    HorizontalAlignment="Left" 
                    Height="{Binding ActualHeight, ElementName=rectangle, Mode=OneWay}"
@@ -930,26 +731,143 @@
                    Grid.Row="1" 
                    VerticalAlignment="Top" MinWidth="566" Width="566"/>
 
-        <ListView x:Name="listView" Grid.Column="1" 
-                  Grid.RowSpan="2" 
-                  Background="White" 
+        <ListView x:Name="Wastes" Grid.Column="1" 
+                  Background="#FFF8FAFD" 
                   BorderBrush="{x:Null}" 
                   Grid.Row="1"
+                  BorderThickness="0"
                   ScrollViewer.VerticalScrollBarVisibility="Hidden"
                   IsTabStop="False" 
                   ScrollViewer.HorizontalScrollBarVisibility="Hidden"
-                  Foreground="White"
-                  Grid.ColumnSpan="2" 
-                  Margin="0,5,0,0">
-            <ListViewItem x:Name="listViewItem" Height="100" 
-                          Margin="0" 
-                          Background="White"
-                          BorderThickness="0"
-                          Style="{StaticResource ListViewItemStyle}" 
-                          Width="{Binding ActualWidth, ElementName=listView, Mode=OneWay}" 
-                          HorizontalAlignment="Center" 
-                          VerticalAlignment="Center"/>
+                  Foreground="White"/>
 
+
+        <ListView x:Name="Menu"
+                  HorizontalAlignment="Center"
+                  VerticalAlignment="Top"
+                  Background="White"
+                  ScrollViewer.VerticalScrollBarVisibility="Hidden"
+                  IsTabStop="False" 
+                  ScrollViewer.HorizontalScrollBarVisibility="Hidden"
+                  BorderThickness="0"
+                  BorderBrush="{x:Null}" 
+                  Margin="0,45,1292,0" Grid.ColumnSpan="2" Grid.Row="1">
+            <ListViewItem x:Name="Dashboard"
+                          Width="Auto"
+                          Height="45"
+                          Style="{StaticResource MenuItemStyle}" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock  Text="Dashboard"
+                                Padding="70 10 0 0"
+                                FontFamily="/KeepWastes;component/Fonts/#Arial Rounded MT Bold"
+                                Foreground="#FFD4D8DE" 
+                                FontSize="17" Width="185"/>
+                    <materialDesign:PackIcon Kind="ViewDashboard"
+                                                 Width="30"
+                                                 Height="30" Margin="-167,4,0,0" VerticalAlignment="Top" Foreground="#FFD4D8DE"/>
+                </StackPanel>
+            </ListViewItem>
+
+            <ListViewItem x:Name="Stats"
+                          Padding="50 0 0 0"
+                          Width="Auto"
+                          Style="{StaticResource MenuItemStyle}"
+                          FontFamily="/KeepWastes;component/Fonts/#Arial Rounded MT Bold"
+                          Foreground="#FFD4D8DE" 
+                          FontSize="17" Height="45" Margin="0,10,0,0">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock  Text="Stats"
+                                Padding="70 10 0 0"
+                                FontFamily="/KeepWastes;component/Fonts/#Arial Rounded MT Bold"
+                                Foreground="#FFD4D8DE" 
+                                FontSize="17" Width="185"/>
+                    <materialDesign:PackIcon Kind="Poll"
+                                             Width="30"
+                                             Height="30"
+                                             Margin="-167,4,0,0"
+                                             Foreground="#FFD4D8DE"/>
+                </StackPanel>
+            </ListViewItem>
+
+            <ListViewItem x:Name="Important"
+                          Width="Auto"
+                          Padding="50 0 0 0"
+                          Style="{StaticResource MenuItemStyle}"
+                          FontFamily="/KeepWastes;component/Fonts/#Arial Rounded MT Bold"
+                          Foreground="#FFD4D8DE" FontSize="17" Height="45" Margin="0,10,0,0">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock  Text="Important"
+                                Padding="70 10 0 0"
+                                FontFamily="/KeepWastes;component/Fonts/#Arial Rounded MT Bold"
+                                Foreground="#FFD4D8DE" 
+                                FontSize="17" Width="185"/>
+                    <materialDesign:PackIcon Kind="Heart"
+                                             Width="30"
+                                             Height="30"
+                                             Margin="-167,4,0,0"
+                                             Foreground="#FFD4D8DE"/>
+                </StackPanel>
+            </ListViewItem>
+
+            <ListViewItem x:Name="Events"
+                          Width="Auto"
+                          Padding="50 0 0 0"
+                          Style="{StaticResource MenuItemStyle}"
+                          FontFamily="/KeepWastes;component/Fonts/#Arial Rounded MT Bold"
+                          Foreground="#FFD4D8DE" FontSize="17" Height="45" Margin="0,10,0,0">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock  Text="Events"
+                                Padding="70 10 0 0"
+                                FontFamily="/KeepWastes;component/Fonts/#Arial Rounded MT Bold"
+                                Foreground="#FFD4D8DE" 
+                                FontSize="17" Width="185"/>
+                    <materialDesign:PackIcon Kind="Calendar"
+                                             Width="30"
+                                             Height="30"
+                                             Margin="-167,4,0,0"
+                                             Foreground="#FFD4D8DE"/>
+                </StackPanel>
+            </ListViewItem>
+
+
+            <ListViewItem x:Name="Feedback"
+                          Width="Auto"
+                          Padding="50 0 0 0"
+                          Style="{StaticResource MenuItemStyle}"
+                          FontFamily="/KeepWastes;component/Fonts/#Arial Rounded MT Bold"
+                          Foreground="#FFD4D8DE" FontSize="17" Height="45" Margin="0,10,0,0">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock  Text="Feedback"
+                                Padding="70 10 0 0"
+                                FontFamily="/KeepWastes;component/Fonts/#Arial Rounded MT Bold"
+                                Foreground="#FFD4D8DE" 
+                                FontSize="17" Width="185"/>
+                    <materialDesign:PackIcon Kind="Telegram"
+                                             Width="30"
+                                             Height="30"
+                                             Margin="-167,4,0,0"
+                                             Foreground="#FFD4D8DE"/>
+                </StackPanel>
+            </ListViewItem>
+
+            <ListViewItem x:Name="Settings"
+                          Width="Auto"
+                          Style="{StaticResource MenuItemStyle}"
+                          FontFamily="/KeepWastes;component/Fonts/#Arial Rounded MT Bold"
+                          Foreground="#FFD4D8DE" FontSize="17" Height="45" Margin="0,10,0,0">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock  Text="Settings"
+                                Padding="70 10 0 0"
+                                FontFamily="/KeepWastes;component/Fonts/#Arial Rounded MT Bold"
+                                Foreground="#FFD4D8DE" 
+                                FontSize="17" Width="185"/>
+                    <materialDesign:PackIcon Kind="Settings"
+                                             Width="30"
+                                             Height="30"
+                                             Margin="-167,4,0,0"
+                                             Foreground="#FFD4D8DE"/>
+                </StackPanel>
+            </ListViewItem>
         </ListView>
 
 
@@ -959,7 +877,6 @@
                Content="{Binding CurrentPage}"
                NavigationUIVisibility="Hidden"
                Opacity="{Binding FrameOpacity}" 
-               Height="0" Width="0"/>
-        <StackPanel HorizontalAlignment="Left" Height="691" Grid.Row="1" VerticalAlignment="Top" Width="255" Grid.RowSpan="2" Background="#FFF8FAFD"/>
+               Height="0" Width="0" Margin="0"/>
     </Grid>
 </Window>
