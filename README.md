@@ -11,7 +11,7 @@ We have to write a lot of money wastes to track my budget on my Phone. We've fou
 >
 >`Android:` [1Money](https://play.google.com/store/apps/details?id=org.pixelrush.moneyiq&hl=ru)
 
-When  we tried to find a **GOOD** similar app for Windows, we ware a little bit confused. So, KeepWastes is going to change it! 
+When  we tried to find a **GOOD** similar app for Windows, we were a little bit confused. So, KeepWastes is going to change it! 
 
 # Used libraries and add-ons
 
@@ -25,6 +25,7 @@ Date| Event
 ----|-----
 `11.07.18`| Created README for the app
 `13.07.18` | Redesigned the app
+`23.10.18` | Waiting for the sun...
 # To-Do
 - [x] New Design
 - [ ] Registration system
