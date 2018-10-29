@@ -1,12 +1,9 @@
----
-description: 'The best open-source application for budget-tracking, written on C#'
----
-
 # KeepWastes
+The best open-source application for budget-tracking, written on C#
 
 | Contents |  |
 | :---: | :--- |
-| [Histor](./#why-was-it-created)[y](./#used-libraries-and-add-ons) |  |
+| [History](./#why-was-it-created) |  |
 | [Libraries](./#used-libraries-and-add-ons) |  |
 | [To-Do](./#list-to-do) |  |
 
