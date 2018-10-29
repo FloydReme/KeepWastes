@@ -4,9 +4,9 @@ The best open-source application for budget-tracking, written on C#
 
 ## Contents
 
-> * [History of project](./#why-was-it-created)
-> * [Libraries](./#used-libraries-and-add-ons)
-> * [To-Do](./#list-to-do)
+> * [History of project](#why-was-it-created)
+> * [Libraries](#used-libraries-and-add-ons)
+> * [To-Do](#list-to-do)
 
 ### Why was it created?
 
