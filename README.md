@@ -1,14 +1,14 @@
 # KeepWastes
 
-The best open-source application for budget-tracking, written on C\#The best open-source application for budget-tracking, written on C\#
+The best open-source application for budget-tracking, written on C#
 
-### Contents
+## Contents
 
 > * [History of project](./#why-was-it-created)
 > * [Libraries](./#used-libraries-and-add-ons)
 > * [To-Do](./#list-to-do)
 
-#### Why was it created?
+### Why was it created?
 
 We have to write a lot of money wastes to track my budget on my Phone. We've found 2 best apps for solving this problem for iOS and Android:
 
@@ -18,14 +18,14 @@ We have to write a lot of money wastes to track my budget on my Phone. We've fou
 
 When we tried to find a **GOOD** similar app for Windows, we were a little bit confused. So, KeepWastes is going to change it!
 
-#### Used libraries and add-ons
+### Used libraries and add-ons
 
 | Name | Reason |
 | :--- | :--- |
 | [Material Design Toolkit](https://github.com/ButchersBoy/MaterialDesignInXamlToolkit) | Provides necessary elements for the app |
 | [MySQL DataBase](https://dev.mysql.com/downloads/workbench/) | Saving your wastes |
 
-#### List-To-Do
+### List-To-Do
 
 * [x] New Design
 * [ ] Registration system
